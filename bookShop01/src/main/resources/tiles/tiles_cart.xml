@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="/cart/myCartList" extends="baseLayout">
+       <put-attribute name="title" value="내 장바구니 정보" />
+       <put-attribute name="body" value="/WEB-INF/views/cart/myCartList.jsp" />
+    </definition>
+</tiles-definitions>
+
+

@@ -1,0 +1,42 @@
+ul.bjqs {
+	list-style: none; margin: 0px; padding: 0px; overflow: hidden; display: none; position: relative;
+}
+li.bjqs-slide {
+	display: none; position: absolute;
+}
+ul.bjqs-controls {
+	list-style: none; margin: 0px; padding: 0px; z-index: 9999;
+}
+ol.bjqs-markers {
+	list-style: none; margin: 0px; padding: 0px; z-index: 9999;
+}
+ol.bjqs-markers li {
+	float: left;
+}
+p.bjqs-caption {
+	margin: 0px; padding: 2%; width: 96%; bottom: 0px; display: block; position: absolute;
+}
+ul.bjqs-controls li a {
+	background: rgb(255, 255, 255); padding: 5px 10px; color: rgb(253, 1, 0); text-transform: uppercase; text-decoration: none; display: block; position: absolute;
+}
+a.bjqs-prev {
+	left: 0px;
+}
+a.bjqs-next {
+	right: 0px;
+}
+p.bjqs-caption {
+	background: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255);
+}
+ol.bjqs-markers {
+	right: 10px; bottom: 20px; float: right; position: relative;
+}
+ol.bjqs-markers li {
+	margin: 0px 3px; float: left;
+}
+ol.bjqs-markers li a {
+	background: rgb(255, 255, 255); padding: 3px; border-radius: 10px; border: 1px solid rgb(51, 51, 51); border-image: none; width: 9px; height: 9px; text-align: center; overflow: hidden; font-size: 0.7em; display: block;
+}
+ol.bjqs-markers li.active-marker a {
+	background: rgb(255, 153, 0);
+}

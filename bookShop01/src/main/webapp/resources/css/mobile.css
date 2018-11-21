@@ -1,0 +1,6 @@
+@import url( smartphone.css ) only screen and (max-width:480px) and (min-width:200px);
+@import url( smartphone.css ) not all, not all;
+@import url( tablet.css ) only screen and (max-width:1000px) and (min-width:768px);
+@import url( tablet.css ) only screen and (orientation:portrait) and (max-width:1000px) and (min-width:768px);
+@import url( tablet.css ) only screen and (orientation:landscape) and (max-width:1000px) and (min-width:768px);
+@import url( main.css ) only screen and (max-width:1600px) and (min-width:1100px);
