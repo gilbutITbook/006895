@@ -56,7 +56,7 @@
 				if(data.trim()=='add_success'){
 					imagePopup('open', '.layer01');	
 				}else if(data.trim()=='already_existed'){
-					alert("이미 카트에 등록된 제품입니다.");	
+					alert("이미 카트에 등록된 상품입니다.");	
 				}
 				
 			},
