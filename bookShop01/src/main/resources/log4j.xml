@@ -10,6 +10,16 @@
 		</layout>
 	</appender>
 	
+		<!-- DailyFile Appenders -->
+	<appender name="dailyFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="C:\\spring\\logs\\bookshop.log" />
+		<layout class="org.apache.log4j.PatternLayout">
+		  <param name="DatePattern"   value="'.'yyyy-MM-dd"/>
+			<param name="ConversionPattern"   value="[%d{HH:mm:ss}][%-5p](%F:%L)-%m%n"/>
+		</layout>
+	</appender>
+	
+	
 	<!-- Application Loggers -->
 	<logger name="com.bookshop01">
 		<level value="debug" />
@@ -36,6 +46,7 @@
 	<root>
 		<priority value="debug" />
 		<appender-ref ref="console" />
+		<appender-ref ref="dailyFileAppender" />
 	</root>
 	
 </log4j:configuration>

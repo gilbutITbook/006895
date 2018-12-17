@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.bookshop01.admin.goods.dao.AdminGoodsDAO;
-import com.bookshop01.admin.member.dao.AdminMemberDao;
+import com.bookshop01.admin.member.dao.AdminMemberDAO;
 import com.bookshop01.goods.vo.GoodsVO;
 import com.bookshop01.goods.vo.ImageFileVO;
 import com.bookshop01.member.vo.MemberVO;
@@ -31,17 +31,17 @@ import com.bookshop01.order.vo.OrderVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class AdminMemberServiceImpl implements AdminMemberService {
 	@Autowired
-	AdminMemberDao adminMemberDao;
+	AdminMemberDAO adminMemberDAO;
 	public ArrayList<MemberVO> listMember(HashMap condMap) throws Exception{
-		return adminMemberDao.listMember(condMap);
+		return adminMemberDAO.listMember(condMap);
 	}
 
 	public MemberVO memberDetail(String member_id) throws Exception{
-		 return adminMemberDao.memberDetail(member_id);
+		 return adminMemberDAO.memberDetail(member_id);
 	}
 	
 	public void  modifyMemberInfo(HashMap memberMap) throws Exception{
 		 String member_id=(String)memberMap.get("member_id");
-		 adminMemberDao.modifyMemberInfo(memberMap);
+		 adminMemberDAO.modifyMemberInfo(memberMap);
 	}
 }

@@ -18,8 +18,8 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	OrderDAO orderDAO;
 	
-	public ArrayList<OrderVO> listMyOrderGoods(OrderVO orderVO) throws Exception{
-		ArrayList<OrderVO> orderGoodsList;
+	public List<OrderVO> listMyOrderGoods(OrderVO orderVO) throws Exception{
+		List<OrderVO> orderGoodsList;
 		orderGoodsList=orderDAO.listMyOrderGoods(orderVO);
 		return orderGoodsList;
 	}

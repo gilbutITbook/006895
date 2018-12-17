@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" 
+   "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+   <bean id="calcTarget" class="com.spring.ex01.Calculator" />
+   <bean id="logAdvice" class="com.spring.ex01.LoggingAdvice" />
+   
+   <bean id="proxyCal"
+          class="org.springframework.aop.framework.ProxyFactoryBean">
+      <property name="target" ref="calcTarget"/>
+      <property name="interceptorNames">
+         <list>
+            <value>logAdvice</value>
+         </list>
+      </property>
+   </bean>
+</beans>
