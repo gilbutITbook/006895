@@ -12,7 +12,7 @@
 	
 		<!-- DailyFile Appenders -->
 	<appender name="dailyFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="C:\\spring\\logs\\bookshop.log" />
+		<param name="File" value="C:\\shopping\\logs\\bookshop.log" />
 		<layout class="org.apache.log4j.PatternLayout">
 		  <param name="DatePattern"   value="'.'yyyy-MM-dd"/>
 			<param name="ConversionPattern"   value="[%d{HH:mm:ss}][%-5p](%F:%L)-%m%n"/>
