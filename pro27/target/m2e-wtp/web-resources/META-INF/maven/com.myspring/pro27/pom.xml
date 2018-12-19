@@ -172,31 +172,32 @@
 			<artifactId>tiles-servlet</artifactId>
 			<version>2.2.2</version>
 			</dependency>
-			<!-- AOP -->
-			<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-aop</artifactId>
-		<version>${org.springframework-version}</version>
-	</dependency>
+			
+		<!-- AOP -->
+		<dependency>
+		  <groupId>org.springframework</groupId>
+		  <artifactId>spring-aop</artifactId>
+		  <version>${org.springframework-version}</version>
+	  </dependency>
 
 	<!-- AspectJ -->
-<dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjrt</artifactId>
-    <version>${org.aspectj-version}</version>
-</dependency>
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjrt</artifactId>
+	    <version>${org.aspectj-version}</version>
+	</dependency>
  
-<dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjweaver</artifactId>
-    <version>${org.aspectj-version}</version>
-</dependency>
- 
-<dependency>
-    <groupId>org.aspectj</groupId>
-    <artifactId>aspectjtools</artifactId>
-    <version>${org.aspectj-version}</version>
-</dependency>
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>${org.aspectj-version}</version>
+	</dependency>
+	 
+	<dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjtools</artifactId>
+	    <version>${org.aspectj-version}</version>
+	</dependency>
 
 	</dependencies>
 	<build>
