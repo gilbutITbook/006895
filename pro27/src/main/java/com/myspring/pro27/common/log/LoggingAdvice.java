@@ -27,19 +27,19 @@ public class LoggingAdvice {
 		logger.info("-------------------------------------");
 		logger.info("-------------------------------------");
 
-		/* 전달되는 모든 파라미터들을 Object의 배열로 가져옵니다. */
+		// 전달되는 모든 파라미터들을 Object의 배열로 가져옵니다. 
 		logger.info("1:" + Arrays.toString(jp.getArgs()));
 
-		/* 해당 Advice의 타입을 알아냅니다. */
+		// 해당 Advice의 타입을 알아냅니다. 
 		logger.info("2:" + jp.getKind());
 
-		/* 실행하는 대상 객체의 메소드에 대한 정보를 알아낼 때 사용합니다. */
+		// 실행하는 대상 객체의 메소드에 대한 정보를 알아낼 때 사용합니다. 
 		logger.info("3:" + jp.getSignature().getName());
 
-		/* target 객체를 알아낼 때 사용합니다. */
+		// target 객체를 알아낼 때 사용합니다. 
 		logger.info("4:" + jp.getTarget().toString());
 
-		/* Advice를 행하는 객체를 알아낼 때 사용합니다. */
+		// Advice를 행하는 객체를 알아낼 때 사용합니다. 
 		logger.info("5:" + jp.getThis().toString());
 
 	}
