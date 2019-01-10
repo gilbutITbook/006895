@@ -19,7 +19,7 @@ import com.bookshop01.goods.service.GoodsService;
 import com.bookshop01.goods.vo.GoodsVO;
 
 @Controller("mainController")
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy
 public class MainController extends BaseController {
 	@Autowired
 	private GoodsService goodsService;
