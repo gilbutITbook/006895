@@ -61,7 +61,7 @@ public class MemberDAO {
 
 	public void addMember(MemberVO memberVO) {
 		try {
-			Connection con = dataFactory.getConnection();
+			con = dataFactory.getConnection();
 			String id = memberVO.getId();
 			String pwd = memberVO.getPwd();
 			String name = memberVO.getName();
@@ -84,7 +84,7 @@ public class MemberDAO {
 
 	public void delMember(String id) {
 		try {
-			Connection con = dataFactory.getConnection();
+			con = dataFactory.getConnection();
 			Statement stmt = con.createStatement();
 			String query = "delete from t_member" + " where id=?";
 			System.out.println("prepareStatememt:" + query);
