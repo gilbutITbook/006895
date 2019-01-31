@@ -3,7 +3,6 @@ package sec02.ex01;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Date;
-import java.sql.Timestamp;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -13,7 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-/*@WebServlet("/member2")*/
+
+@WebServlet("/member2")
 public class MemberServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)  throws ServletException, IOException{
       response.setContentType("text/html;charset=utf-8");

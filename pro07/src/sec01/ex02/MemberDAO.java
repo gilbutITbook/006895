@@ -8,11 +8,8 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.naming.Context;
-import javax.naming.InitialContext;
-import javax.sql.DataSource;
-
 public class MemberDAO {
+	
 	private static final String driver = "oracle.jdbc.driver.OracleDriver";
 	private static final String url = "jdbc:oracle:thin:@localhost:1521:XE";
 	private static final String user = "scott";
@@ -20,22 +17,11 @@ public class MemberDAO {
 	
 	private Connection con;
 	private PreparedStatement pstmt;
-	private DataSource dataFactory;
-	public MemberDAO() {
-		try {
-			Context ctx = new InitialContext();
-			Context envContext = (Context) ctx.lookup("java:/comp/env");
-			dataFactory = (DataSource) envContext.lookup("jdbc/oracle");
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	public List listMembers() {
 		List list = new ArrayList();
 		try {
 			connDB();
-			con=dataFactory.getConnection();
 			String query = "select * from t_member ";
 			System.out.println("prepareStatememt: " + query);
 			pstmt = con.prepareStatement(query);
