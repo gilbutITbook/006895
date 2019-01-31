@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/* @WebServlet("/member")*/
+ @WebServlet("/member")
 public class MemberServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request,HttpServletResponse response)
                                                     throws IOException,ServletException{
