@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /*@WebServlet("/first")*/
 public class FirstServlet extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse response)  throws  ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws  ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		request.setAttribute("address", "서울시 성북구");

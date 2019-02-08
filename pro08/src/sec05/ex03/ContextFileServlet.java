@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/cfile")
 public class ContextFileServlet extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=euc-kr");
 		PrintWriter out = response.getWriter();
 		ServletContext context = getServletContext();

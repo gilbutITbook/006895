@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/cset")
 public class SetServletContext extends HttpServlet {
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		ServletContext context = getServletContext();
