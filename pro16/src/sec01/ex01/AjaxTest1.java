@@ -32,7 +32,7 @@ public class AjaxTest1 extends HttpServlet {
 		doHandler(request, response);
 	}
 
-	protected void doHandler(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+	private void doHandler(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
 		String param = (String) request.getParameter("param");
