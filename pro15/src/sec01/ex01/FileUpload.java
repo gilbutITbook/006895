@@ -40,7 +40,7 @@ public class FileUpload extends HttpServlet {
 		doHandle(request, response);
 	}
 
-	public void doHandle(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
+	private void doHandle(HttpServletRequest request, HttpServletResponse response)	throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 			String encoding = "utf-8";
 			File currentDirPath = new File("C:\\file_repo");
