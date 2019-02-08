@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /*@WebServlet("/member2")*/
 public class MemberServlet extends HttpServlet {
-	public void doGet(HttpServletRequest request,HttpServletResponse response)  throws ServletException, IOException{
+	protected void doGet(HttpServletRequest request,HttpServletResponse response)  throws ServletException, IOException{
       response.setContentType("text/html;charset=utf-8");
       PrintWriter out=response.getWriter();	
       MemberDAO dao=new MemberDAO();
