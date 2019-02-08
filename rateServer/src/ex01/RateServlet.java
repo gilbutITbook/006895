@@ -29,7 +29,7 @@ public class RateServlet extends HttpServlet {
 		doHandle(request,response);
 	}
 	
-	protected void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			request.setCharacterEncoding("utf-8");
 			response.setContentType("text/html; charset=utf-8");
 			PrintWriter pw = response.getWriter();

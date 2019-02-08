@@ -15,7 +15,7 @@ public class GuguTest extends HttpServlet {
 		System.out.println("init 메서드 호출");
 	}
 
-	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();

@@ -15,7 +15,7 @@ public class GuguTest2 extends HttpServlet{
       System.out.println("init 메서드 호출");
    }
 
-   public void doGet(HttpServletRequest request, HttpServletResponse response) 
+   protected void doGet(HttpServletRequest request, HttpServletResponse response) 
                                     throws IOException, ServletException{
       request.setCharacterEncoding("utf-8");            
       response.setContentType("text/html;charset=utf-8");  
@@ -33,15 +33,14 @@ public class GuguTest2 extends HttpServlet{
 	 }else {
 	     out.print("<tr align=center bgcolor='#81BEF7'> ");
 	 }
-	out.print("<td width=400>"); 
-	out.print(dan+" *  "+i );    
-        out.print("</td>");
-	out.print("<td width=400>");
-	out.print(i*dan); 
-	out.print("</td>");
-	out.print("</tr>");
+		out.print("<td width=400>"); 
+		out.print(dan+" *  "+i );    
+	        out.print("</td>");
+		out.print("<td width=400>");
+		out.print(i*dan); 
+		out.print("</td>");
+		out.print("</tr>");
       }
-
       out.print("</table>");
    }
 

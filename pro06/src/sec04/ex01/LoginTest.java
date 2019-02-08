@@ -15,7 +15,7 @@ public class LoginTest extends HttpServlet{
       System.out.println("init 메서드 호출");
    }
 
-   public void doPost(HttpServletRequest request, HttpServletResponse response) 
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) 
                                                   throws IOException, ServletException{
       request.setCharacterEncoding("utf-8");   
       response.setContentType("text/html;charset=utf-8");  
@@ -27,19 +27,19 @@ public class LoginTest extends HttpServlet{
       System.out.println("패스워드 : "+ pw);
 	
      if(id!= null &&(id.length()!=0)){
-	out.print("<html>");  
-	out.print("<body>");
-	out.print( id +" 님!! 로그인 하셨습니다." );
-	out.print("</html>");
-	out.print("</body>");
+		out.print("<html>");  
+		out.print("<body>");
+		out.print( id +" 님!! 로그인 하셨습니다." );
+		out.print("</html>");
+		out.print("</body>");
       }else{
-	out.print("<html>");  
-	out.print("<body>");
-	out.print("아이디를 입력하세요!!!" ) ;
-	out.print("<br>");
-	out.print("<a href='http://localhost:8090/pro06/test01/login.html'>로그인창으로 이동  </a>");
-	out.print("</html>");
-	out.print("</body>");
+		out.print("<html>");  
+		out.print("<body>");
+		out.print("아이디를 입력하세요!!!" ) ;
+		out.print("<br>");
+		out.print("<a href='http://localhost:8090/pro06/test01/login.html'>로그인창으로 이동  </a>");
+		out.print("</html>");
+		out.print("</body>");
       }
    }
 

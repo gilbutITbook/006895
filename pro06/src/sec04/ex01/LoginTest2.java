@@ -15,8 +15,7 @@ public class LoginTest2 extends HttpServlet{
       System.out.println("init 메서드 호출");
    }
 
-   public void doPost(HttpServletRequest request, HttpServletResponse response) 
-                                                  throws IOException, ServletException{
+   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
       request.setCharacterEncoding("utf-8");   
       response.setContentType("text/html;charset=utf-8");  
       PrintWriter out = response.getWriter();				
@@ -27,30 +26,30 @@ public class LoginTest2 extends HttpServlet{
       System.out.println("패스워드 : "+ pw);
 
       if(id!= null &&(id.length()!=0)){
-	 if(id.equals("admin")){
-	   out.print("<html>");
-	   out.print("<body>");
- 	   out.print( "<font size='12'>관리자로 로그인 하셨습니다!! </font>" );
-	   out.print("<br>");
-	   out.print("<input type=button value='회원정보 수정하기'  />");
-	   out.print("<input type=button value='회원정보 삭제하기'  />");
-	   out.print("</html>");
-	   out.print("</body>");
-	 }else{
-	   out.print("<html>");
-	   out.print("<body>");
-	   out.print( id +" 님!! 로그인 하셨습니다." );
-	   out.print("</html>");
-	   out.print("</body>");
-	}     
+		 if(id.equals("admin")){
+		   out.print("<html>");
+		   out.print("<body>");
+	 	   out.print( "<font size='12'>관리자로 로그인 하셨습니다!! </font>" );
+		   out.print("<br>");
+		   out.print("<input type=button value='회원정보 수정하기'  />");
+		   out.print("<input type=button value='회원정보 삭제하기'  />");
+		   out.print("</html>");
+		   out.print("</body>");
+		 }else{
+		   out.print("<html>");
+		   out.print("<body>");
+		   out.print( id +" 님!! 로그인 하셨습니다." );
+		   out.print("</html>");
+		   out.print("</body>");
+		 }     
       }else{
-	out.print("<html>");  
-	out.print("<body>");
-	out.print("ID와 비밀번호를 입력하세요!!!" ) ;
-	out.print("<br>");
-	out.print("<a href='http://localhost:8090/pro06/test01/login.html'> 로그인창으로 이동  </a>");
-	out.print("</html>");
-	out.print("</body>");
+		out.print("<html>");  
+		out.print("<body>");
+		out.print("ID와 비밀번호를 입력하세요!!!" ) ;
+		out.print("<br>");
+		out.print("<a href='http://localhost:8090/pro06/test01/login.html'> 로그인창으로 이동  </a>");
+		out.print("</html>");
+		out.print("</body>");
       }
    }
    public void destroy(){
