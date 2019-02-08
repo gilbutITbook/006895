@@ -25,7 +25,7 @@ public class SessionTest4 extends HttpServlet {
 		doHandle(request, response);
 	}
 
-	public void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
