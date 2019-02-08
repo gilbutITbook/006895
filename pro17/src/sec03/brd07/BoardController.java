@@ -44,8 +44,7 @@ public class BoardController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doHandle(request, response);
 	}
 
@@ -53,13 +52,11 @@ public class BoardController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doHandle(request, response);
 	}
 
-	protected void doHandle(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String nextPage = "";
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html; charset=utf-8");
@@ -187,8 +184,7 @@ public class BoardController extends HttpServlet {
 		}
 	}
 
-	private Map<String, String> upload(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	private Map<String, String> upload(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Map<String, String> articleMap = new HashMap<String, String>();
 		String encoding = "utf-8";
 		File currentDirPath = new File(ARTICLE_IMAGE_REPO);
