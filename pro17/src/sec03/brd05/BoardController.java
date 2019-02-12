@@ -157,8 +157,6 @@ public class BoardController extends HttpServlet {
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
 					System.out.println("파라미터명:" + fileItem.getFieldName());
-					//System.out.println("파일명:" + fileItem.getName());
-					
 					System.out.println("파일크기:" + fileItem.getSize() + "bytes");
 					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
