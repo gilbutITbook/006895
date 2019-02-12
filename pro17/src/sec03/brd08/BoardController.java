@@ -220,9 +220,9 @@ public class BoardController extends HttpServlet {
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
 					System.out.println("파라미터명:" + fileItem.getFieldName());
-					System.out.println("파일명:" + fileItem.getName());
+					//System.out.println("파일명:" + fileItem.getName());
 					System.out.println("파일크기:" + fileItem.getSize() + "bytes");
-					articleMap.put(fileItem.getFieldName(), fileItem.getName());
+					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
 						int idx = fileItem.getName().lastIndexOf("\\");
 						if (idx == -1) {
@@ -230,6 +230,8 @@ public class BoardController extends HttpServlet {
 						}
 
 						String fileName = fileItem.getName().substring(idx + 1);
+						System.out.println("파일명:" + fileName);
+								articleMap.put(fileItem.getFieldName(), fileName);  //익스플로러에서 업로드 파일의 경로 제거 후 map에 파일명 저장);
 						File uploadFile = new File(currentDirPath + "\\temp\\" + fileName);
 						fileItem.write(uploadFile);
 

@@ -25,7 +25,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Servlet implementation class BoardController
  */
-@WebServlet("/board/*")
+/*@WebServlet("/board/*")*/
 public class BoardController extends HttpServlet {
 	private static String ARTICLE_IMAGE_REPO = "C:\\board\\article_image";
 	BoardService boardService;
@@ -157,6 +157,7 @@ public class BoardController extends HttpServlet {
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
 					System.out.println("파라미터명:" + fileItem.getFieldName());
+					//System.out.println("파일명:" + fileItem.getName());
 					System.out.println("파일크기:" + fileItem.getSize() + "bytes");
 					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
