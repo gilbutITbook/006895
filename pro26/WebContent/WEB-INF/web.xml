@@ -3,7 +3,8 @@
 	xmlns="http://java.sun.com/xml/ns/javaee"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	 <listener>
+<!-- 	 
+   <listener>
       <listener-class>
          org.springframework.web.context.ContextLoaderListener
      </listener-class>
@@ -13,8 +14,8 @@
       <param-value>
           /WEB-INF/config/action-mybatis.xml
       </param-value>
-   </context-param> 
-	
+   </context-param>  
+
 	<filter>
 		<filter-name>encodingFilter</filter-name>
 		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
@@ -26,7 +27,8 @@
 	<filter-mapping>
 		<filter-name>encodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+	</filter-mapping> 
+	-->
 	
 	<servlet>
 		<servlet-name>action</servlet-name>
