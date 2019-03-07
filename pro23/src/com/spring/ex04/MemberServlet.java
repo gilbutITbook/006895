@@ -33,7 +33,7 @@ public class MemberServlet extends HttpServlet {
 		String nextPage = "";
 
 		if (action == null || action.equals("listMembers")) {
-			List membersList = dao.selectAllMemberList();
+			List<MemberVO> membersList = dao.selectAllMemberList();
 			request.setAttribute("membersList", membersList);
 			nextPage = "test03/listMembers.jsp";
 		} else if (action.equals("selectMemberById")) {
@@ -62,7 +62,7 @@ public class MemberServlet extends HttpServlet {
            String pwd=request.getParameter("pwd");
            String name=request.getParameter("name");
            String email = request.getParameter("email");         
-           Map memberMap=new HashMap();
+           Map<String, String> memberMap=new HashMap<String, String>();
            memberMap.put("id", id);
            memberMap.put("pwd", pwd);
            memberMap.put("name", name);
@@ -89,7 +89,7 @@ public class MemberServlet extends HttpServlet {
           String email=request.getParameter("email");
           memberVO.setName(name);
           memberVO.setEmail(email);
-          List membersList =dao.searchMember(memberVO);
+          List<MemberVO> membersList =dao.searchMember(memberVO);
           request.setAttribute("membersList",membersList);
           nextPage="test03/listMembers.jsp";
        }else if(action.equals("foreachSelect")) {
@@ -109,7 +109,7 @@ public class MemberServlet extends HttpServlet {
           nextPage="/mem4.do?action=listMembers";
 	    }else if(action.equals("selectLike")) {
 	      String name="±æµ¿";
-		  List membersList=dao.selectLike(name);
+		  List<MemberVO> membersList=dao.selectLike(name);
 		  request.setAttribute("membersList",membersList);
 		  nextPage="test03/listMembers.jsp";
 	   }

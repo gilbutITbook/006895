@@ -30,7 +30,7 @@ public class MemberServlet extends HttpServlet {
 		String nextPage = "";
 
 		if (action== null || action.equals("listMembers")) {
-			List membersList = dao.selectAllMemberList();
+			List<MemberVO> membersList = dao.selectAllMemberList();
 			request.setAttribute("membersList", membersList);
 			nextPage = "test02/listMembers.jsp";
 		} else if (action.equals("selectMemberById")) {

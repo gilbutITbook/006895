@@ -84,14 +84,14 @@ public class MemberDAO {
 		return result;
     } 
     
-    public List  searchMember(MemberVO  memberVO){
+    public List<MemberVO>  searchMember(MemberVO  memberVO){
         sqlMapper=getInstance();
         SqlSession session=sqlMapper.openSession();
         List list=session.selectList("mapper.member.searchMember",memberVO);
         return list;		
     } 
 
-    public List  foreachSelect(List nameList){
+    public List<MemberVO>  foreachSelect(List nameList){
         sqlMapper=getInstance();
         SqlSession session=sqlMapper.openSession();
         List list=session.selectList("mapper.member.foreachSelect",nameList);
@@ -107,7 +107,7 @@ public class MemberDAO {
      }
     
     
-    public List  selectLike(String name){
+    public List<MemberVO>  selectLike(String name){
         sqlMapper=getInstance();
         SqlSession session=sqlMapper.openSession();
         List list=session.selectList("mapper.member.selectLike",name);
