@@ -32,7 +32,7 @@ public class SetCookieValue extends HttpServlet {
 		//c.setMaxAge(-1);  //세션 쿠키를 생성합니다.
 		response.addCookie(c);
 		out.println("현재시간 : " + d);
-		out.println("현재시간을 Cookie로 저장합니다.");
+		out.println("<br> 문자열을 Cookie에 저장합니다.");
 
 	}
 
