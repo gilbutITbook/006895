@@ -51,7 +51,7 @@ public class GoodsControllerImpl extends BaseController   implements GoodsContro
 		   return null ;
 	
 		keyword = keyword.toUpperCase();
-	    List keywordList =goodsService.keywordSearch(keyword);
+	    List<String> keywordList =goodsService.keywordSearch(keyword);
 	    
 	 // 최종 완성될 JSONObject 선언(전체)
 		JSONObject jsonObject = new JSONObject();
@@ -66,7 +66,7 @@ public class GoodsControllerImpl extends BaseController   implements GoodsContro
 	public ModelAndView searchGoods(@RequestParam("searchWord") String searchWord,
 			                       HttpServletRequest request, HttpServletResponse response) throws Exception{
 		String viewName=(String)request.getAttribute("viewName");
-		List goodsList=goodsService.searchGoods(searchWord);
+		List<GoodsVO> goodsList=goodsService.searchGoods(searchWord);
 		ModelAndView mav = new ModelAndView(viewName);
 		mav.addObject("goodsList", goodsList);
 		return mav;

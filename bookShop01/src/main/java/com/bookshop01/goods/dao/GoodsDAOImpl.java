@@ -9,6 +9,7 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Repository;
 
 import com.bookshop01.goods.vo.GoodsVO;
+import com.bookshop01.goods.vo.ImageFileVO;
 
 @Repository("goodsDAO")
 public class GoodsDAOImpl  implements GoodsDAO{
@@ -16,14 +17,14 @@ public class GoodsDAOImpl  implements GoodsDAO{
 	private SqlSession sqlSession;
 
 	@Override
-	public List selectGoodsList(String goodsStatus ) throws DataAccessException {
-		List goodsList=(ArrayList)sqlSession.selectList("mapper.goods.selectGoodsList",goodsStatus);
+	public List<GoodsVO> selectGoodsList(String goodsStatus ) throws DataAccessException {
+		List<GoodsVO> goodsList=(ArrayList)sqlSession.selectList("mapper.goods.selectGoodsList",goodsStatus);
 	   return goodsList;	
      
 	}
 	@Override
-	public ArrayList selectKeywordSearch(String keyword) throws DataAccessException {
-	   ArrayList list=(ArrayList)sqlSession.selectList("mapper.goods.selectKeywordSearch",keyword);
+	public List<String> selectKeywordSearch(String keyword) throws DataAccessException {
+	   List<String> list=(ArrayList)sqlSession.selectList("mapper.goods.selectKeywordSearch",keyword);
 	   return list;
 	}
 	
@@ -40,8 +41,8 @@ public class GoodsDAOImpl  implements GoodsDAO{
 	}
 	
 	@Override
-	public ArrayList selectGoodsDetailImage(String goods_id) throws DataAccessException{
-		 ArrayList imageList=(ArrayList)sqlSession.selectList("mapper.goods.selectGoodsDetailImage",goods_id);
+	public List<ImageFileVO> selectGoodsDetailImage(String goods_id) throws DataAccessException{
+		List<ImageFileVO> imageList=(ArrayList)sqlSession.selectList("mapper.goods.selectGoodsDetailImage",goods_id);
 		return imageList;
 	}
 	
