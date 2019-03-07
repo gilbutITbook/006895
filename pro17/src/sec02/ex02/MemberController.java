@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 /**
  * Servlet implementation class MemberController
  */
@@ -45,7 +46,7 @@ public class MemberController extends HttpServlet {
 		String action = request.getPathInfo();
 		System.out.println("action:" + action);
 		if (action == null || action.equals("/listMembers.do")) {
-			List membersList = memberDAO.listMembers();
+			List<MemberVO> membersList = memberDAO.listMembers();
 			request.setAttribute("membersList", membersList);
 			nextPage = "/test03/listMembers.jsp";
 		} else if (action.equals("/addMember.do")) {
@@ -79,7 +80,7 @@ public class MemberController extends HttpServlet {
 		     request.setAttribute("msg", "deleted");
 		     nextPage="/member/listMembers.do";
 		}else {
-			List membersList = memberDAO.listMembers();
+			List<MemberVO> membersList = memberDAO.listMembers();
 			request.setAttribute("membersList", membersList);
 			nextPage = "/test03/listMembers.jsp";
 		}

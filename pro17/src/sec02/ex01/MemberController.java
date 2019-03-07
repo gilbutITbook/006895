@@ -45,7 +45,7 @@ public class MemberController extends HttpServlet {
 		String action = request.getPathInfo();
 		System.out.println("action:" + action);
 		if (action == null || action.equals("/listMembers.do")) {
-			List membersList = memberDAO.listMembers();
+			List<MemberVO> membersList = memberDAO.listMembers();
 			request.setAttribute("membersList", membersList);
 			nextPage = "/test02/listMembers.jsp";
 		} else if (action.equals("/addMember.do")) {
@@ -60,7 +60,7 @@ public class MemberController extends HttpServlet {
 		} else if (action.equals("/memberForm.do")) {
 			nextPage = "/test02/memberForm.jsp";
 		} else {
-			List membersList = memberDAO.listMembers();
+			List<MemberVO> membersList = memberDAO.listMembers();
 			request.setAttribute("membersList", membersList);
 			nextPage = "/test02/listMembers.jsp";
 		}
