@@ -11,7 +11,7 @@ public class BoardService {
 		boardDAO = new BoardDAO();
 	}
 
-	public Map listArticles(Map pagingMap) {
+	public Map listArticles(Map<String, Integer> pagingMap) {
 		Map articlesMap = new HashMap();
 		List<ArticleVO> articlesList = boardDAO.selectAllArticles(pagingMap);
 		int totArticles = boardDAO.selectTotArticles();

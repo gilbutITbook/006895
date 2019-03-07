@@ -11,6 +11,7 @@ import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.sql.DataSource;
 
+
 public class BoardDAO {
 	private DataSource dataFactory;
 	Connection conn;
@@ -26,8 +27,8 @@ public class BoardDAO {
 		}
 	}
 
-	public List selectAllArticles() {
-		List articlesList = new ArrayList();
+	public List<ArticleVO> selectAllArticles() {
+		List<ArticleVO> articlesList = new ArrayList<ArticleVO>();
 		try {
 			conn = dataFactory.getConnection();
 			String query = "SELECT LEVEL,articleNO,parentNO,title,content,id,writeDate" + " from t_board"
