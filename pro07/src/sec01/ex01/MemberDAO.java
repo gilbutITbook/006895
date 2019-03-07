@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,8 +16,8 @@ public class MemberDAO {
 	private Connection con;
 	private Statement stmt;
 
-	public List listMembers() {
-		List list = new ArrayList();
+	public List<MemberVO> listMembers() {
+		List<MemberVO> list = new ArrayList<MemberVO>();
 		try {
 			connDB();
 			String query = "select * from t_member ";

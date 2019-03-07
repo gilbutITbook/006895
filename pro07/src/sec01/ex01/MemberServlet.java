@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*@WebServlet("/member")*/
+@WebServlet("/member")
 public class MemberServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,HttpServletResponse response)
                                                     throws ServletException, IOException {
       response.setContentType("text/html;charset=utf-8");
       PrintWriter out=response.getWriter();	
       MemberDAO dao=new MemberDAO();
-      List list=dao.listMembers();
+      List<MemberVO> list=dao.listMembers();
 	
       out.print("<html><body>");
       out.print("<table  border=1><tr align='center' bgcolor='lightgreen'>");
