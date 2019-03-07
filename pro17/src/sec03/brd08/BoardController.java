@@ -70,7 +70,7 @@ public class BoardController extends HttpServlet {
 				String _pageNum=request.getParameter("pageNum");
 				int section = Integer.parseInt(((_section==null)? "1":_section) );
 				int pageNum = Integer.parseInt(((_pageNum==null)? "1":_pageNum));
-				Map pagingMap=new HashMap();
+				Map<String, Integer> pagingMap = new HashMap<String, Integer>();
 				pagingMap.put("section", section);
 				pagingMap.put("pageNum", pageNum);
 				Map articlesMap=boardService.listArticles(pagingMap);
