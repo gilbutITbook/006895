@@ -93,15 +93,15 @@ public class MemberServlet extends HttpServlet {
           request.setAttribute("membersList",membersList);
           nextPage="test03/listMembers.jsp";
        }else if(action.equals("foreachSelect")) {
-		  List<String> nameList = new ArrayList();
+		  List<String> nameList = new ArrayList<String>();
 		  nameList.add("홍길동");
 		  nameList.add("차범근");
 		  nameList.add("이순신");
-		  List membersList=dao.foreachSelect(nameList);
+		  List<MemberVO> membersList=dao.foreachSelect(nameList);
 		  request.setAttribute("membersList",membersList);
 		  nextPage="test03/listMembers.jsp";
 	   }else if(action.equals("foreachInsert")) {
-          List<MemberVO> memList = new ArrayList();
+          List<MemberVO> memList = new ArrayList<MemberVO>();
           memList.add(new MemberVO("m1", "1234", "박길동", "m1@test.com"));
           memList.add(new MemberVO("m2", "1234", "이길동", "m2@test.com"));
           memList.add(new MemberVO("m3", "1234", "김길동", "m3@test.com"));
