@@ -34,7 +34,7 @@ public class MailController {
  		sb.append("<a href='http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788956746425&orderClick=LAG&Kc=#N'>상품보기</a>");
  		sb.append("</body></html>");
  		String str=sb.toString();
- 		mailService.sendMail("x9103293@naver.com","신상품을 소개합니다.",str);
+ 		mailService.sendMail("수신자@naver.com","신상품을 소개합니다.",str);
       
         out.print("메일을 보냈습니다!!");
     }

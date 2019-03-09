@@ -26,7 +26,7 @@ public class MailService {
     	   MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
     	   messageHelper.setSubject(subject);
     	   messageHelper.setTo(to);
-    	   messageHelper.setFrom("x9103293@naver.com", "È«±æµ¿");
+    	   messageHelper.setFrom("¼Û½ÅÀÚ@naver.com", "È«±æµ¿");
     	  messageHelper.setText(body,true);
     	   mailSender.send(message);
     	  }catch(Exception e){
