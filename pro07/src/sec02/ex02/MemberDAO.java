@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,8 +26,8 @@ public class MemberDAO {
 		}
 	}
 
-	public List listMembers() {
-		List list = new ArrayList();
+	public List<MemberVO> listMembers() {
+		List<MemberVO> list = new ArrayList<MemberVO>();
 		try {
 			// connDB();
 			con = dataFactory.getConnection();
@@ -85,7 +84,6 @@ public class MemberDAO {
 	public void delMember(String id) {
 		try {
 			con = dataFactory.getConnection();
-			Statement stmt = con.createStatement();
 			String query = "delete from t_member" + " where id=?";
 			System.out.println("prepareStatememt:" + query);
 			pstmt = con.prepareStatement(query);
