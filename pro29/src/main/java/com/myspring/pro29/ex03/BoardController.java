@@ -3,7 +3,8 @@ package com.myspring.pro29.ex03;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/boards")
 public class BoardController {
-	static Logger logger = Logger.getLogger(BoardController.class);
+	static Logger logger = LoggerFactory.getLogger(BoardController.class);
 	
 	@RequestMapping(value = "/all", method = RequestMethod.GET)
 	public ResponseEntity<List<ArticleVO>> listArticles() {
@@ -66,7 +67,6 @@ public class BoardController {
 		ResponseEntity<String>  resEntity = null;
 		try {
 			logger.info("modArticle 메서드 호출");
-			logger.info(articleNO);
 			logger.info(articleVO.toString());
 			resEntity =new ResponseEntity("MOD_SUCCEEDED",HttpStatus.OK);
 		}catch(Exception e) {
@@ -82,7 +82,7 @@ public class BoardController {
 		ResponseEntity<String>  resEntity = null;
 		try {
 			logger.info("removeArticle 메서드 호출");
-			logger.info(articleNO);
+			logger.info(articleNO.toString());
 			resEntity =new ResponseEntity("REMOVE_SUCCEEDED",HttpStatus.OK);
 		}catch(Exception e) {
 			resEntity = new ResponseEntity(e.getMessage(),HttpStatus.BAD_REQUEST);
