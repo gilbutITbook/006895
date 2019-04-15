@@ -1,5 +1,7 @@
 package com.myspring.pro30.board.vo;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.sql.Date;
 
 public class ImageVO {
@@ -18,7 +20,11 @@ public class ImageVO {
 		return imageFileName;
 	}
 	public void setImageFileName(String imageFileName) {
-		this.imageFileName = imageFileName;
+		try {
+			this.imageFileName = URLEncoder.encode(imageFileName,"UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		}
 	}
 	
 	public Date getRegDate() {
