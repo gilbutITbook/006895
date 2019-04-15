@@ -1,6 +1,7 @@
 package sec03.brd04;
 
 
+import java.net.URLEncoder;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -128,7 +129,7 @@ public class BoardDAO {
 		int parentNO=rs.getInt("parentNO");
 		String title = rs.getString("title");
 		String content =rs.getString("content");
-		String imageFileName =rs.getString("imageFileName");
+		String imageFileName = URLEncoder.encode(rs.getString("imageFileName"), "UTF-8"); //파일이름에 특수문자가 있을 경우 인코딩합니다.
 		String id = rs.getString("id");
 		Date writeDate = rs.getDate("writeDate");
 
