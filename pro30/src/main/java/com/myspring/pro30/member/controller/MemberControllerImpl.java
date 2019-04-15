@@ -23,7 +23,7 @@ import com.myspring.pro30.member.vo.MemberVO;
 
 
 @Controller("memberController")
-@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy
 public class MemberControllerImpl   implements MemberController {
 	@Autowired
 	private MemberService memberService;
