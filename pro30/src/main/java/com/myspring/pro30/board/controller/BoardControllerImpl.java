@@ -314,7 +314,6 @@ public class BoardControllerImpl  implements BoardController{
 	//한개 이미지 업로드하기
 	private String upload(MultipartHttpServletRequest multipartRequest) throws Exception{
 		String imageFileName= null;
-		Map<String, String> articleMap = new HashMap<String, String>();
 		Iterator<String> fileNames = multipartRequest.getFileNames();
 		
 		while(fileNames.hasNext()){
