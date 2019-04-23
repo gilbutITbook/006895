@@ -25,7 +25,7 @@ import org.apache.commons.io.FileUtils;
 /**
  * Servlet implementation class BoardController
  */
-/*@WebServlet("/board/*")*/
+//@WebServlet("/board/*")
 public class BoardController extends HttpServlet {
 	private static String ARTICLE_IMAGE_REPO = "C:\\board\\article_image";
 	BoardService boardService;
@@ -92,7 +92,6 @@ public class BoardController extends HttpServlet {
 					File destDir = new File(ARTICLE_IMAGE_REPO +"\\"+articleNO);
 					destDir.mkdirs();
 					FileUtils.moveFileToDirectory(srcFile, destDir, true);
-					srcFile.delete();
 				}
 				PrintWriter pw = response.getWriter();
 				pw.print("<script>" 
