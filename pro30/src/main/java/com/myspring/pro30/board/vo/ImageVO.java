@@ -21,7 +21,9 @@ public class ImageVO {
 	}
 	public void setImageFileName(String imageFileName) {
 		try {
-			this.imageFileName = URLEncoder.encode(imageFileName,"UTF-8");
+			if(imageFileName!= null && imageFileName.length()!=0) {
+				this.imageFileName = URLEncoder.encode(imageFileName,"UTF-8");
+			}
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
