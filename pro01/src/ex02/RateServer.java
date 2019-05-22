@@ -32,16 +32,16 @@ public class RateServer {
 		float outMessage=0f;
 		try{
 			serverSocket= new ServerSocket(5434);
-			System.out.println("¼­¹ö ½ÇÇà Áß... ");
+			System.out.println("ì„œë²„ ì‹¤í–‰ ì¤‘...");
 			
 			while(true){
-				//Å¬¶óÀÌ¾ğÆ®ÀÇ Á¢¼ÓÀ» ÀÎÁö ½Ã¿¡ accept()¸Ş¼Òµå¸¦ È£ÃâÇØ¼­ ¼ÒÄÏ °´Ã¼¸¦ »ı¼ºÇÑ´Ù.
+				//í´ë¼ì´ì–¸íŠ¸ì˜ ì ‘ì†ì„ ì¸ì§€ ì‹œì— accept()ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•´ì„œ ì†Œì¼“ ê°ì²´ë¥¼ ìƒì„±í•œë‹¤.
 				s1= serverSocket.accept();
 				is=s1.getInputStream();
 				os = s1.getOutputStream();
 				br=new BufferedReader(new InputStreamReader(is));
 				String data=br.readLine();
-				System.out.println("¼­¹ö ¼ö½Å µ¥ÀÌÅÍ:"+data);
+				System.out.println("ì„œë²„ ìˆ˜ì‹  ë°ì´í„°:"+data);
 				String result=calculate(data);
 				System.out.println(result);
 				
@@ -62,15 +62,15 @@ public class RateServer {
 		float won=Float.parseFloat(token[0]);
 		String operator=token[1];
 		String result=null;
-		if(operator.equals("´Ş·¯")){
+		if(operator.equals("ë‹¬ëŸ¬")){
 			result=String.format("%.6f",won/USD_RATE);
-		}else if(operator.equals("¿£È­")){
+		}else if(operator.equals("ì—”í™”")){
 			result=String.format("%.6f",won/JPY_RATE);
-		}else if(operator.equals("À§¾È")){
+		}else if(operator.equals("ìœ„ì•ˆ")){
 			result=String.format("%.6f",won/CNY_RATE);
-		}else if(operator.equals("ÆÄ¿îµå")) {
+		}else if(operator.equals("íŒŒìš´ë“œ")) {
 			result=String.format("%.6f",won/GBP_RATE);
-		}else if(operator.equals("À¯·Î")) {
+		}else if(operator.equals("ìœ ë¡œ")) {
 			result=String.format("%.6f",won/EUR_RATE);
 		}
 		

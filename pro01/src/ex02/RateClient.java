@@ -21,12 +21,12 @@ import javax.swing.JTextField;
 
 
 public class RateClient extends JFrame{
-	JLabel title = new JLabel("¿øÈ­");
+	JLabel title = new JLabel("ì›í™”");
 	JTextField operand1 = new JTextField(10);
-	String[] opExpression = {"¼±ÅÃ","´Ş·¯", "¿£È­", "À§¾È","ÆÄ¿îµå","À¯·Î"};
+	String[] opExpression = {"ì„ íƒ","ë‹¬ëŸ¬", "ì—”í™”", "ìœ„ì•ˆ","íŒŒìš´ë“œ","ìœ ë¡œ"};
 	JComboBox<String> opSelection = new JComboBox<String>(opExpression);
 	JTextField txtResult = new JTextField(10);
-	JButton btnClear = new JButton("´Ù½ÃÀÔ·Â");
+	JButton btnClear = new JButton("ë‹¤ì‹œì…ë ¥");
 	
 	public RateClient() {
 		Container contentPane = this.getContentPane();
@@ -39,7 +39,7 @@ public class RateClient extends JFrame{
 	private void startFrame(){
 		opSelection.addActionListener(new SelectionHandler());
 		btnClear.addActionListener(new SelectionHandler());
-		this.setTitle("Å¬¶óÀÌ¾ğÆ® ÇÁ·Î±×·¥");
+		this.setTitle("í´ë¼ì´ì–¸íŠ¸ í”„ë¡œê·¸ë¨");
 		this.add(operand1);
 		this.add(opSelection);
 		this.add(txtResult);
@@ -79,7 +79,7 @@ public class RateClient extends JFrame{
 			Socket s1=new Socket("127.0.0.1",5434);
 			os = s1.getOutputStream();
 			is=s1.getInputStream();
-			System.out.println("Àü¼Ûµ¥ÀÌÅÍ:"+won+","+operator);
+			System.out.println("ì „ì†¡ë°ì´í„°:"+won+","+operator);
 			
 			
 			bw = new BufferedWriter(new OutputStreamWriter(os));
@@ -88,7 +88,7 @@ public class RateClient extends JFrame{
 		    
 		    br=new BufferedReader(new InputStreamReader(is));
 			result=br.readLine();
-			System.out.println("Å¬¶óÀÌ¾ğÆ® ¼ö½Å µ¥ÀÌÅÍ:"+result);
+			System.out.println("í´ë¼ì´ì–¸íŠ¸ ìˆ˜ì‹  ë°ì´í„°:"+result);
 			txtResult.setText(result);
 			s1.close();
 		}catch(Exception e){
