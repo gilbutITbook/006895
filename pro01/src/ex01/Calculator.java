@@ -19,12 +19,12 @@ public class Calculator extends JFrame {
 	private static float GBP_RATE = 1444.35F;
 	private static float EUR_RATE = 1295.97F;
 			
-	JLabel title = new JLabel("¿øÈ­");
+	JLabel title = new JLabel("ë‹¬ëŸ¬");
 	JTextField operand1 = new JTextField(10);
-	String[] opExpression = {"¼±ÅÃ","´Ş·¯", "¿£È­", "À§¾È","ÆÄ¿îµå","À¯·Î"};
+	String[] opExpression = {"ì„ íƒ","ë‹¬ëŸ¬", "ì—”í™”", "ìœ„ì•ˆ","íŒŒìš´ë“œ","ìœ ë¡œ"};
 	JComboBox<String> opSelection = new JComboBox<String>(opExpression);
 	JTextField txtResult = new JTextField(10);
-	JButton btnClear = new JButton("´Ù½ÃÀÔ·Â");
+	JButton btnClear = new JButton("ë‹¤ì‹œì…ë ¥");
 	
 	public Calculator() {
 		Container contentPane = this.getContentPane();
@@ -37,7 +37,7 @@ public class Calculator extends JFrame {
 	private void startFrame(){
 		opSelection.addActionListener(new SelectionHandler());
 		btnClear.addActionListener(new SelectionHandler());
-		this.setTitle("È¯À² °è»êÇÏ±â");
+		this.setTitle("í™˜ìœ¨ ê³„ì‚°í•˜ê¸°");
 		this.add(title);
 		this.add(operand1);
 		this.add(opSelection);
@@ -63,15 +63,15 @@ public class Calculator extends JFrame {
 		float won=Float.parseFloat(operand1.getText());
 		String result=null;
 		String operator=opSelection.getSelectedItem().toString();
-		if(operator.equals("´Ş·¯")){
+		if(operator.equals("ë‹¬ëŸ¬")){
 			result=String.format("%.6f",won/USD_RATE);
-		}else if(operator.equals("¿£È­")){
+		}else if(operator.equals("ì—”í™”")){
 			result=String.format("%.6f",won/JPY_RATE);
-		}else if(operator.equals("À§¾È")){
+		}else if(operator.equals("ìœ„ì•ˆ")){
 			result=String.format("%.6f",won/CNY_RATE);
-		}else if(operator.equals("ÆÄ¿îµå")) {
+		}else if(operator.equals("íŒŒìš´ë“œ")) {
 			result=String.format("%.6f",won/GBP_RATE);
-		}else if(operator.equals("À¯·Î")) {
+		}else if(operator.equals("ìœ ë¡œ")) {
 			result=String.format("%.6f",won/EUR_RATE);
 		}
 		txtResult.setText(result);
