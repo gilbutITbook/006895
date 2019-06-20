@@ -9,7 +9,8 @@
 <c:set var="imageList"  value="${goodsMap.imageList }"  />
  <%
      //치환 변수 선언합니다.
-      pageContext.setAttribute("crcn", "\r\n"); //개행문자
+      //pageContext.setAttribute("crcn", "\r\n"); //개행문자
+      pageContext.setAttribute("crcn" , "\n"); //Ajax로 변경 시 개행 문자 
       pageContext.setAttribute("br", "<br/>"); //br 태그
 %>  
 <html>

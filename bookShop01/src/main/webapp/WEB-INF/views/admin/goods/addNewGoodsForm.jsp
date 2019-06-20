@@ -10,14 +10,26 @@
 <script type="text/javascript">
   var cnt=0;
   function fn_addFile(){
-	  if(cnt ==0){
-		  $("#d_file").append("<br>"+"<input  type='file' name='main_image'  />");	  
+	  if(cnt == 0){
+		  $("#d_file").append("<br>"+"<input  type='file' name='main_image' id='f_main_image' />");	  
 	  }else{
 		  $("#d_file").append("<br>"+"<input  type='file' name='detail_image"+cnt+"' />");
 	  }
   	
   	cnt++;
   }
+  
+  
+  function fn_add_new_goods(obj){
+		 fileName = $('#f_main_image').val();
+		 if(fileName != null && fileName != undefined){
+			 obj.submit();
+		 }else{
+			 alert("메인 이미지는 반드시 첨부해야 합니다.");
+			 return;
+		 }
+		 
+	}
 </script>    
 </head>
 
@@ -185,7 +197,8 @@
 	 <table>
 	 <tr>
 			  <td align=center>
-				  <input  type="submit" value="상품 등록하기"> 
+				<!--   <input  type="submit" value="상품 등록하기"> --> 
+				  <input  type="button" value="상품 등록하기"  onClick="fn_add_new_goods(this.form)">
 			  </td>
 			</tr>
 	 </table>
