@@ -26,6 +26,7 @@ public class MemberServlet extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		MemberDAO dao = new MemberDAO();
 		List<MemberVO> membersList = dao.selectAllMemberList();
+		//List<HashMap<String, String>> membersList = dao.selectAllMemberList();
 		request.setAttribute("membersList", membersList);
 		RequestDispatcher dispatch = request.getRequestDispatcher("test01/listMembers.jsp");
 		dispatch.forward(request, response);
