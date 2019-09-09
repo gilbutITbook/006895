@@ -33,4 +33,13 @@ public class MemberDAO {
 		memlist = session.selectList("mapper.member.selectAllMemberList");
 		return memlist;
 	}
+	
+//	 public List<HashMap<String, String>> selectAllMemberList() { 
+//		sqlMapper = getInstance(); 
+//     	SqlSession session = sqlMapper.openSession();
+//		List<HashMap<String, String>> memlist = null; 
+//   	memlist = session.selectList("mapper.member.selectAllMemberList"); 
+//		return memlist; 
+//	 }
+	
 }
