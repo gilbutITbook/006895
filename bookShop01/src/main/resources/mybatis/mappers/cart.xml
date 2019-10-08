@@ -92,7 +92,7 @@
 	
 	<select id="selectMaxCartId" resultType="int">
 	    <![CDATA[
-			select max(nvl(cart_id,0)) + 1 from t_shopping_cart
+			select nvl(max(cart_id), 0) + 1 from t_shopping_cart 
     	]]>
 	</select>
 
