@@ -18,7 +18,7 @@ public class FileDownloadController {
 	private static String CURR_IMAGE_REPO_PATH = "c:\\spring\\image_repo";
 
 	@RequestMapping("/download")
-	protected void download(@RequestParam("imageFileName") String imageFileName,
+	public void download(@RequestParam("imageFileName") String imageFileName,
 			                 HttpServletResponse response)throws Exception {
 		OutputStream out = response.getOutputStream();
 		String downFile = CURR_IMAGE_REPO_PATH + "\\" + imageFileName;

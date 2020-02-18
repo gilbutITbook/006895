@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: leebs
-Build-Jdk: 10.0.2
+Built-By: user
+Build-Jdk: 10
 Created-By: Maven Integration for Eclipse
 
