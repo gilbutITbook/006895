@@ -14,7 +14,7 @@ import com.bookshop01.member.vo.MemberVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class MemberServiceImpl implements MemberService {
 	@Autowired
-	MemberDAO memberDAO;
+	private MemberDAO memberDAO;
 	
 	@Override
 	public MemberVO login(Map  loginMap) throws Exception{

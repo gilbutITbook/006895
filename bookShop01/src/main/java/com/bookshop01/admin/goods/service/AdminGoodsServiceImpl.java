@@ -24,7 +24,7 @@ import com.bookshop01.order.vo.OrderVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class AdminGoodsServiceImpl implements AdminGoodsService {
 	@Autowired
-	AdminGoodsDAO adminGoodsDAO;
+	private AdminGoodsDAO adminGoodsDAO;
 	
 	@Override
 	public int addNewGoods(Map newGoodsMap) throws Exception{

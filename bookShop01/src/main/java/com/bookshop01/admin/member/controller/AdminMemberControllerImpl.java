@@ -24,7 +24,7 @@ import com.bookshop01.member.vo.MemberVO;
 @RequestMapping(value="/admin/member")
 public class AdminMemberControllerImpl extends BaseController  implements AdminMemberController{
 	@Autowired
-	AdminMemberService adminMemberService;
+	private AdminMemberService adminMemberService;
 	
 	@RequestMapping(value="/adminMemberMain.do" ,method={RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView adminGoodsMain(@RequestParam Map<String, String> dateMap,

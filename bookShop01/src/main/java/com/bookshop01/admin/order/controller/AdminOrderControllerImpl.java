@@ -39,7 +39,7 @@ import com.bookshop01.order.vo.OrderVO;
 @RequestMapping(value="/admin/order")
 public class AdminOrderControllerImpl extends BaseController  implements AdminOrderController{
 	@Autowired
-	AdminOrderService adminOrderService;
+	private AdminOrderService adminOrderService;
 	
 	@Override
 	@RequestMapping(value="/adminOrderMain.do" ,method={RequestMethod.GET, RequestMethod.POST})

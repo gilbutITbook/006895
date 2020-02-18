@@ -28,9 +28,10 @@ import com.bookshop01.order.vo.OrderVO;
 @RequestMapping(value="/mypage")
 public class MyPageControllerImpl extends BaseController  implements MyPageController{
 	@Autowired
-	MyPageService myPageService;
+	private MyPageService myPageService;
+	
 	@Autowired
-	MemberVO memberVO;
+	private MemberVO memberVO;
 	
 	@Override
 	@RequestMapping(value="/myPageMain.do" ,method = RequestMethod.GET)

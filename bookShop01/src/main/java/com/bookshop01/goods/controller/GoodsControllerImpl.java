@@ -26,7 +26,7 @@ import net.sf.json.JSONObject;
 @RequestMapping(value="/goods")
 public class GoodsControllerImpl extends BaseController   implements GoodsController {
 	@Autowired
-	GoodsService goodsService;
+	private GoodsService goodsService;
 	
 	@RequestMapping(value="/goodsDetail.do" ,method = RequestMethod.GET)
 	public ModelAndView goodsDetail(@RequestParam("goods_id") String goods_id,

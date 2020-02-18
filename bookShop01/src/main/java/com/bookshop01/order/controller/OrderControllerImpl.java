@@ -27,9 +27,9 @@ import com.bookshop01.order.vo.OrderVO;
 @RequestMapping(value="/order")
 public class OrderControllerImpl extends BaseController implements OrderController {
 	@Autowired
-	OrderService orderService;
+	private OrderService orderService;
 	@Autowired
-	OrderVO orderVO;
+	private OrderVO orderVO;
 	
 	@RequestMapping(value="/orderEachGoods.do" ,method = RequestMethod.POST)
 	public ModelAndView orderEachGoods(@ModelAttribute("orderVO") OrderVO _orderVO,

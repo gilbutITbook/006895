@@ -28,11 +28,11 @@ import com.bookshop01.member.vo.MemberVO;
 @RequestMapping(value="/cart")
 public class CartControllerImpl extends BaseController implements CartController{
 	@Autowired
-	CartService cartService;
+	private CartService cartService;
 	@Autowired
-	CartVO cartVO;
+	private CartVO cartVO;
 	@Autowired
-	MemberVO memberVO;
+	private MemberVO memberVO;
 	
 	@RequestMapping(value="/myCartList.do" ,method = RequestMethod.GET)
 	public ModelAndView myCartMain(HttpServletRequest request, HttpServletResponse response)  throws Exception {

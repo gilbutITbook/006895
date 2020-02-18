@@ -20,7 +20,7 @@ import com.bookshop01.order.vo.OrderVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class MyPageServiceImpl  implements MyPageService{
 	@Autowired
-	MyPageDAO myPageDAO;
+	private MyPageDAO myPageDAO;
 
 	public List<OrderVO> listMyOrderGoods(String member_id) throws Exception{
 		return myPageDAO.selectMyOrderGoodsList(member_id);

@@ -16,7 +16,7 @@ import com.bookshop01.order.vo.OrderVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class OrderServiceImpl implements OrderService {
 	@Autowired
-	OrderDAO orderDAO;
+	private OrderDAO orderDAO;
 	
 	public List<OrderVO> listMyOrderGoods(OrderVO orderVO) throws Exception{
 		List<OrderVO> orderGoodsList;

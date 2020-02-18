@@ -18,7 +18,7 @@ import com.bookshop01.goods.vo.GoodsVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class CartServiceImpl  implements CartService{
 	@Autowired
-	CartDAO cartDAO;
+	private CartDAO cartDAO;
 	
 	public Map<String ,List> myCartList(CartVO cartVO) throws Exception{
 		Map<String,List> cartMap=new HashMap<String,List>();

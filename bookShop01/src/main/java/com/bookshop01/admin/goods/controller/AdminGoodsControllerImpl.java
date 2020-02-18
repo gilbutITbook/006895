@@ -34,7 +34,7 @@ import com.bookshop01.member.vo.MemberVO;
 public class AdminGoodsControllerImpl extends BaseController  implements AdminGoodsController{
 	private static final String CURR_IMAGE_REPO_PATH = "C:\\shopping\\file_repo";
 	@Autowired
-	AdminGoodsService adminGoodsService;
+	private AdminGoodsService adminGoodsService;
 	
 	@RequestMapping(value="/adminGoodsMain.do" ,method={RequestMethod.POST,RequestMethod.GET})
 	public ModelAndView adminGoodsMain(@RequestParam Map<String, String> dateMap,

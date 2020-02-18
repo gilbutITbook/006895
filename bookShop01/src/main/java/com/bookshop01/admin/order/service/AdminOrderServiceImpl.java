@@ -32,7 +32,7 @@ import com.bookshop01.order.vo.OrderVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class AdminOrderServiceImpl implements AdminOrderService {
 	@Autowired
-	AdminOrderDAO adminOrderDAO;
+	private AdminOrderDAO adminOrderDAO;
 	
 	public List<OrderVO>listNewOrder(Map condMap) throws Exception{
 		return adminOrderDAO.selectNewOrderList(condMap);

@@ -17,7 +17,7 @@ import com.bookshop01.goods.vo.ImageFileVO;
 @Transactional(propagation=Propagation.REQUIRED)
 public class GoodsServiceImpl implements GoodsService{
 	@Autowired
-	GoodsDAO goodsDAO;
+	private GoodsDAO goodsDAO;
 	
 	public Map<String,List<GoodsVO>> listGoods() throws Exception {
 		Map<String,List<GoodsVO>> goodsMap=new HashMap<String,List<GoodsVO>>();

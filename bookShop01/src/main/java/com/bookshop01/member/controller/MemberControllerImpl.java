@@ -26,9 +26,9 @@ import com.bookshop01.member.vo.MemberVO;
 @RequestMapping(value="/member")
 public class MemberControllerImpl extends BaseController implements MemberController{
 	@Autowired
-	MemberService memberService;
+	private MemberService memberService;
 	@Autowired
-	MemberVO memberVO;
+	private MemberVO memberVO;
 	
 	@Override
 	@RequestMapping(value="/login.do" ,method = RequestMethod.POST)
