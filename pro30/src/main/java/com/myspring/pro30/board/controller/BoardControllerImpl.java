@@ -37,9 +37,9 @@ import com.myspring.pro30.member.vo.MemberVO;
 public class BoardControllerImpl  implements BoardController{
 	private static final String ARTICLE_IMAGE_REPO = "C:\\board\\article_image";
 	@Autowired
-	BoardService boardService;
+	private BoardService boardService;
 	@Autowired
-	ArticleVO articleVO;
+	private ArticleVO articleVO;
 	
 	@Override
 	@RequestMapping(value= "/board/listArticles.do", method = {RequestMethod.GET, RequestMethod.POST})
