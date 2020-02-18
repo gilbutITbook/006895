@@ -12,7 +12,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import com.spring.ex01.MemberVO;
 
 public class MemberDAO {
-	public static SqlSessionFactory sqlMapper = null;
+	private static SqlSessionFactory sqlMapper = null;
 
 	private static SqlSessionFactory getInstance() {
 		if (sqlMapper == null) {

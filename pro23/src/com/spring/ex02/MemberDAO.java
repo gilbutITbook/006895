@@ -9,7 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MemberDAO {
-	public static SqlSessionFactory sqlMapper = null;
+	private static SqlSessionFactory sqlMapper = null;
 
 	private static SqlSessionFactory getInstance() {
 		if (sqlMapper == null) {
