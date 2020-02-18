@@ -24,7 +24,7 @@ public class MemberControllerImpl  implements MemberController {
 	private MemberService memberService;
 	
 	@Autowired
-	MemberVO memberVO ;
+	private MemberVO memberVO ;
 	
 
 	
