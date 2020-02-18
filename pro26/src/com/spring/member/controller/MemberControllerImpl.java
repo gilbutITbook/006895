@@ -24,7 +24,7 @@ public class MemberControllerImpl   implements MemberController {
 	@Autowired
 	private MemberService memberService;
 	@Autowired
-	MemberVO memberVO ;
+	private MemberVO memberVO ;
 	
 	@Override
 	@RequestMapping(value="/member/listMembers.do" ,method = RequestMethod.GET)
