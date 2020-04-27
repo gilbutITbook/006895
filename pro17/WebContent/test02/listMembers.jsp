@@ -38,14 +38,14 @@ request.setCharacterEncoding("UTF-8");
    </tr>
 
 <c:choose>
-    <c:when test="${ membersList==null}" >
+    <c:when test="${ empty membersList}" >
       <tr>
-        <td colspan=5>
+        <td colspan="5" align="center">
           <b>등록된 회원이 없습니다.</b>
        </td>  
       </tr>
    </c:when>  
-   <c:when test="${membersList != null }" >
+   <c:when test="${!empty membersList}" >
       <c:forEach  var="mem" items="${membersList }" >
         <tr align="center">
           <td>${mem.id }</td>

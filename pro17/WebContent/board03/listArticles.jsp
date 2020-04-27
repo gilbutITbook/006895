@@ -26,7 +26,7 @@
      <td >작성일</td>
   </tr>
 <c:choose>
-  <c:when test="${articlesList ==null }" >
+  <c:when test="${empty articlesList}" >
     <tr  height="10">
       <td colspan="4">
          <p align="center">
@@ -35,7 +35,7 @@
       </td>  
     </tr>
   </c:when>
-  <c:when test="${articlesList !=null }" >
+  <c:when test="${!empty articlesList }" >
     <c:forEach  var="article" items="${articlesList }" varStatus="articleNum" >
      <tr align="center">
 	<td width="5%">${articleNum.count}</td>
