@@ -28,7 +28,7 @@ public class MemberControllerImpl   implements MemberController {
 	@Autowired
 	private MemberService memberService;
 	@Autowired
-	MemberVO memberVO ;
+	private MemberVO memberVO ;
 	
 	@RequestMapping(value = { "/","/main.do"}, method = RequestMethod.GET)
 	private ModelAndView main(HttpServletRequest request, HttpServletResponse response) {
@@ -41,6 +41,8 @@ public class MemberControllerImpl   implements MemberController {
 	@Override
 	@RequestMapping(value="/member/listMembers.do" ,method = RequestMethod.GET)
 	public ModelAndView listMembers(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
 		String viewName = (String)request.getAttribute("viewName");
 		List membersList = memberService.listMembers();
 		ModelAndView mav = new ModelAndView(viewName);
@@ -53,6 +55,7 @@ public class MemberControllerImpl   implements MemberController {
 	public ModelAndView addMember(@ModelAttribute("member") MemberVO member,
 			                  HttpServletRequest request, HttpServletResponse response) throws Exception {
 		request.setCharacterEncoding("utf-8");
+		response.setContentType("html/text;charset=utf-8");
 		int result = 0;
 		result = memberService.addMember(member);
 		ModelAndView mav = new ModelAndView("redirect:/member/listMembers.do");
