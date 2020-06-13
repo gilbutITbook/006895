@@ -86,6 +86,8 @@ public class BoardController extends HttpServlet {
 				articleVO.setImageFileName(imageFileName);
 				boardService.addArticle(articleVO);
 				nextPage = "/board/listArticles.do";
+			}else {
+				nextPage = "/board02/listArticles.jsp";
 			}
 
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

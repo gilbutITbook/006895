@@ -175,7 +175,11 @@ public class BoardController extends HttpServlet {
 				pw.print("<script>" + "  alert('답글을 추가했습니다.');" + " location.href='" + request.getContextPath()
 						+ "/board/viewArticle.do?articleNO="+articleNO+"';" + "</script>");
 				return;
+			
+			}else {
+				nextPage = "/board06/listArticles.jsp";
 			}
+			
 
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);
 			dispatch.forward(request, response);

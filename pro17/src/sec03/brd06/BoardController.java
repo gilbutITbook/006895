@@ -143,6 +143,9 @@ public class BoardController extends HttpServlet {
 				pw.print("<script>" + "  alert('글을 삭제했습니다.');" + " location.href='" + request.getContextPath()
 						+ "/board/listArticles.do';" + "</script>");
 				return;
+			
+			}else {
+				nextPage = "/board05/listArticles.jsp";
 			}
 
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

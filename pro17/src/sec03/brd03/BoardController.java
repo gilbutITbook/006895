@@ -100,6 +100,8 @@ public class BoardController extends HttpServlet {
 				         +"</script>");
 
 				return;
+			}else {
+				nextPage = "/board02/listArticles.jsp";
 			}
 
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

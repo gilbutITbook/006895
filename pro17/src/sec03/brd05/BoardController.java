@@ -130,6 +130,9 @@ public class BoardController extends HttpServlet {
 				pw.print("<script>" + "  alert('글을 수정했습니다.');" + " location.href='" + request.getContextPath()
 						+ "/board/viewArticle.do?articleNO=" + articleNO + "';" + "</script>");
 				return;
+			
+			}else {
+				nextPage = "/board04/listArticles.jsp";
 			}
 
 			RequestDispatcher dispatch = request.getRequestDispatcher(nextPage);

@@ -105,6 +105,9 @@ public class BoardController extends HttpServlet {
 				articleVO=boardService.viewArticle(Integer.parseInt(articleNO));
 				request.setAttribute("article",articleVO);
 				nextPage = "/board03/viewArticle.jsp";
+			
+			}else {
+				nextPage = "/board03/listArticles.jsp";
 			}
 
 
