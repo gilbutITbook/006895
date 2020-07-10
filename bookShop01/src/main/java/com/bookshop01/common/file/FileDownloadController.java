@@ -50,8 +50,6 @@ public class FileDownloadController {
 		String filePath=CURR_IMAGE_REPO_PATH+"\\"+goods_id+"\\"+fileName;
 		File image=new File(filePath);
 		
-		int lastIndex = fileName.lastIndexOf(".");
-		String imageFileName = fileName.substring(0,lastIndex);
 		if (image.exists()) { 
 			Thumbnails.of(image).size(121,154).outputFormat("png").toOutputStream(out);
 		}
