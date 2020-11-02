@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class BoardController
  */
-@WebServlet("/board/*")
+//@WebServlet("/board/*")
 public class BoardController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	BoardService boardService;
