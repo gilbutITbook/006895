@@ -27,8 +27,8 @@ public class MemberServlet extends HttpServlet {
 		int pwd = dao.selectPwd();
 		PrintWriter pw = response.getWriter();
 		pw.write("<script>");
-		//pw.write("alert(' ¿Ã∏ß: " + name +"');");
-		pw.write("alert(' ∫Òπ–π¯»£ : "+ pwd+"');");
+		//pw.write("alert(' Ïù¥Î¶Ñ: " + name +"');");
+		pw.write("alert(' ÎπÑÎ∞ÄÎ≤àÌò∏: "+ pwd+"');");
 		pw.write("</script>");
 
 	}
