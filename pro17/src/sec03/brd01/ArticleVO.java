@@ -87,7 +87,9 @@ public class ArticleVO {
 
 	public String getImageFileName() {
 		try {
-			imageFileName = URLDecoder.decode(imageFileName, "UTF-8");
+			if (imageFileName != null && imageFileName.length() != 0) {
+				imageFileName = URLDecoder.decode(imageFileName, "UTF-8");
+			}
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
 		}
