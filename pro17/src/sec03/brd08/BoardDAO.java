@@ -175,7 +175,7 @@ public class BoardDAO {
 		ArticleVO article = new ArticleVO();
 		try {
 			conn = dataFactory.getConnection();
-			String query = "select articleNO,parentNO,title,content, imageFileName,id,writeDate" + " from t_board"
+			String query = "select articleNO,parentNO,title,content, NVL(imageFileName, 'null') as imageFileName, id, writeDate" + " from t_board"
 					+ " where articleNO=?";
 			System.out.println(query);
 			pstmt = conn.prepareStatement(query);
@@ -186,7 +186,11 @@ public class BoardDAO {
 			int parentNO = rs.getInt("parentNO");
 			String title = rs.getString("title");
 			String content = rs.getString("content");
-			String imageFileName = rs.getString("imageFileName");
+			String imageFileName = URLEncoder.encode(rs.getString("imageFileName"), "UTF-8"); //파일이름에 특수문자가 있을 경우 인코딩합니다.
+			if(imageFileName.equals("null")) {
+				imageFileName = null;
+			}
+			
 			String id = rs.getString("id");
 			Date writeDate = rs.getDate("writeDate");
 
