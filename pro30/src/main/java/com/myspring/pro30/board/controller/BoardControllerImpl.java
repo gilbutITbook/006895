@@ -342,7 +342,7 @@ public class BoardControllerImpl  implements BoardController{
 			if(mFile.getSize()!=0){ //File Null Check
 				if(!file.exists()){ //경로상에 파일이 존재하지 않을 경우
 					file.getParentFile().mkdirs();  //경로에 해당하는 디렉토리들을 생성
-					mFile.transferTo(new File(ARTICLE_IMAGE_REPO +"\\"+"temp"+ "\\"+imageFileName)); //임시로 저장된 multipartFile을 실제 파일로 전송
+					mFile.transferTo(new File(ARTICLE_IMAGE_REPO +"\\"+"temp"+ "\\"+originalFileName)); //임시로 저장된 multipartFile을 실제 파일로 전송
 				}
 			}
 		}
