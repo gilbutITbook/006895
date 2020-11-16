@@ -83,7 +83,7 @@ public class BoardControllerImpl  implements BoardController{
 			int articleNO = boardService.addNewArticle(articleMap);
 			if(imageFileName!=null && imageFileName.length()!=0) {
 				File srcFile = new 
-				File(ARTICLE_IMAGE_REPO+"\\"+"temp"+"\\"+imageFileName);
+				File(ARTICLE_IMAGE_REPO+ "\\" + "temp"+ "\\" + imageFileName);
 				File destDir = new File(ARTICLE_IMAGE_REPO+"\\"+articleNO);
 				FileUtils.moveFileToDirectory(srcFile, destDir,true);
 			}
@@ -316,7 +316,7 @@ public class BoardControllerImpl  implements BoardController{
 			String fileName = fileNames.next();
 			MultipartFile mFile = multipartRequest.getFile(fileName);
 			imageFileName=mFile.getOriginalFilename();
-			File file = new File(ARTICLE_IMAGE_REPO +"\\"+ fileName);
+			File file = new File(ARTICLE_IMAGE_REPO +"\\"+"temp"+"\\" + fileName);
 			if(mFile.getSize()!=0){ //File Null Check
 				if(!file.exists()){ //경로상에 파일이 존재하지 않을 경우
 					file.getParentFile().mkdirs();  //경로에 해당하는 디렉토리들을 생성
@@ -338,7 +338,7 @@ public class BoardControllerImpl  implements BoardController{
 			MultipartFile mFile = multipartRequest.getFile(fileName);
 			String originalFileName=mFile.getOriginalFilename();
 			fileList.add(originalFileName);
-			File file = new File(ARTICLE_IMAGE_REPO +"\\"+ fileName);
+			File file = new File(ARTICLE_IMAGE_REPO +"\\"+"temp"+"\\" + fileName);
 			if(mFile.getSize()!=0){ //File Null Check
 				if(!file.exists()){ //경로상에 파일이 존재하지 않을 경우
 					file.getParentFile().mkdirs();  //경로에 해당하는 디렉토리들을 생성
