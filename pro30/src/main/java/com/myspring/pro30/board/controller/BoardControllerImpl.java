@@ -240,7 +240,7 @@ public class BoardControllerImpl  implements BoardController{
 	MemberVO memberVO = (MemberVO) session.getAttribute("member");
 	String id = memberVO.getId();
 	articleMap.put("id",id);
-	
+	articleMap.put("parentNO", 0);
 	
 	List<String> fileList =upload(multipartRequest);
 	List<ImageVO> imageFileList = new ArrayList<ImageVO>();
