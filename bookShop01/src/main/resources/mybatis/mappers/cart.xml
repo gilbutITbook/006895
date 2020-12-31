@@ -7,7 +7,7 @@
 	<!-- 리절트 맵 정의 -->
 	<resultMap id="cartResult" type="CartVO">
 		<result property="cart_id" column="cart_id" />
-		<result property="goods_id" column="goods_title" />
+		<result property="goods_id" column="goods_id" />
 		<result property="member_id" column="member_id" />
 		<result property="cart_goods_qty" column="cart_goods_qty" />
 		<result property="creDate" column="creDate" />
@@ -37,7 +37,8 @@
 
 	<select id="selectCartList"  parameterType="cartVO"  resultMap="cartResult"   >
 	    <![CDATA[
-		select * from t_shopping_cart 
+		select cart_id, goods_id, member_id, cart_goods_qty, creDate 
+		from t_shopping_cart 
 		where member_id=#{member_id} 
 		]]>
 	</select>
