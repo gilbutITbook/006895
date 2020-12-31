@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/*@WebServlet("/viewMembers")*/
+//@WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,HttpServletResponse response)
 		                                            throws ServletException, IOException {
@@ -31,11 +31,11 @@ public class ViewServlet extends HttpServlet {
 			String email = memberVO.getEmail();
 			Date joinDate = memberVO.getJoinDate();
 			out.print("<tr><td>" + id + "</td><td>" + pwd + "</td><td>" + name + "</td><td>" + email + "</td><td>"
-					+ joinDate + "</td><td>" + "<a href='/pro07/member3?command=delMember&id=" + id
+					+ joinDate + "</td><td>" + "<a href='/pro08/member3?command=delMember&id=" + id
 					+ "'>삭제 </a></td></tr>");
 
 		}
 		out.print("</table></body></html>");
-		out.print("<a href='/pro07/memberForm.html'>새 회원 등록하기</a");
+		out.print("<a href='/pro08/memberForm.html'>새 회원 등록하기</a");
 	}
 }
