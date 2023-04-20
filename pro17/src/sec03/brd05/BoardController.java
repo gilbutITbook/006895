@@ -26,7 +26,7 @@ import org.apache.commons.io.FileUtils;
  * Servlet implementation class BoardController
  */
 
-@WebServlet("/board/*")
+//@WebServlet("/board/*")
 public class BoardController extends HttpServlet {
 	private static String ARTICLE_IMAGE_REPO = "C:\\board\\article_image";
 	BoardService boardService;

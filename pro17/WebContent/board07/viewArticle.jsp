@@ -38,7 +38,7 @@
 	 
 	 function fn_remove_article(url,articleNO){
 		 var form = document.createElement("form");
-		 form.setAttribute("method", "post");
+		 form.setAttribute("method", "get");
 		 form.setAttribute("action", url);
 	     var articleNOInput = document.createElement("input");
 	     articleNOInput.setAttribute("type","hidden");

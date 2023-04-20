@@ -17,12 +17,40 @@
    
    </style>
    <script  src="http://code.jquery.com/jquery-latest.min.js"></script> 
+   
+   
+      <c:choose>
+  		<c:when test="${not empty article.imageFileName && article.imageFileName!='null' }">
+    	 <script type="text/javascript" >
+	    	 function fn_enable(obj){
+	    		 document.getElementById("i_title").disabled=false;
+	    		 document.getElementById("i_content").disabled=false;
+	    		 document.getElementById("i_imageFileName").disabled=false;
+	    		 document.getElementById("tr_btn_modify").style.display="block";
+	    		 document.getElementById("tr_btn").style.display="none";
+	    	 }
+   		</script> 
+  		</c:when>
+  		<c:otherwise>
+	  		 <script type="text/javascript" >
+		    	 function fn_enable(obj){
+		    		 document.getElementById("i_title").disabled=false;
+		    		 document.getElementById("i_content").disabled=false;
+		    		 
+		    		 document.getElementById("tr_btn_modify").style.display="block";
+		    		 document.getElementById("tr_btn").style.display="none";
+		    	 }
+	   		</script>
+  		</c:otherwise>
+  </c:choose>
+  
+  
    <script type="text/javascript" >
      function backToList(obj){
 	    obj.action="${contextPath}/board/listArticles.do";
 	    obj.submit();
      }
- 
+ /* 
 	 function fn_enable(obj){
 		 document.getElementById("i_title").disabled=false;
 		 document.getElementById("i_content").disabled=false;
@@ -30,7 +58,7 @@
 		 document.getElementById("tr_btn_modify").style.display="block";
 		 document.getElementById("tr_btn").style.display="none";
 	 }
-	 
+ */	 
 	 function fn_modify_article(obj){
 		 obj.action="${contextPath}/board/modArticle.do";
 		 obj.submit();
