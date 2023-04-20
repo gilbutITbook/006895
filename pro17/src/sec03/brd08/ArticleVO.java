@@ -88,8 +88,6 @@ public class ArticleVO {
 		try {
 			if (imageFileName != null && imageFileName.length() != 0) {
 				imageFileName = URLDecoder.decode(imageFileName, "UTF-8");
-			}else {
-				this.imageFileName = imageFileName;
 			}
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -101,6 +99,8 @@ public class ArticleVO {
 		try {
 			if(imageFileName!=null && imageFileName.length()!=0) {
 				this.imageFileName = URLEncoder.encode(imageFileName, "UTF-8");  //파일이름에 특수문자가 있을 경우 인코딩합니다.
+			}else {
+				this.imageFileName = imageFileName;
 			}
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
