@@ -6,7 +6,7 @@ import org.springframework.core.io.FileSystemResource;
 
 public class MemberTest1 {
 	public static void main(String[] args) {
-		BeanFactory factory = new XmlBeanFactory(new FileSystemResource("member.xml"));
+		BeanFactory factory = new ClassPathXmlApplicationContext("member.xml");
 		MemberService service = (MemberService) factory.getBean("memberService");
 		service.listMembers();
 	}
