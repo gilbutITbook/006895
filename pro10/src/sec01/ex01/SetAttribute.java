@@ -25,16 +25,16 @@ public class SetAttribute extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		String ctxMesg = "context¿¡ ¹ÙÀÎµùµË´Ï´Ù.";
-		String sesMesg = "session¿¡ ¹ÙÀÎµùµË´Ï´Ù.";
-		String reqMesg = "request¿¡ ¹ÙÀÎµùµË´Ï´Ù.";
+		String ctxMesg = "contextì— ë°”ì¸ë”©ë©ë‹ˆë‹¤.";
+		String sesMesg = "sessionì— ë°”ì¸ë”©ë©ë‹ˆë‹¤.";
+		String reqMesg = "requestì— ë°”ì¸ë”©ë©ë‹ˆë‹¤.";
 
 		ServletContext ctx = getServletContext();
 		HttpSession session = request.getSession();
 		ctx.setAttribute("context", ctxMesg);
 		session.setAttribute("session", sesMesg);
 		request.setAttribute("request", reqMesg);
-		out.print("¹ÙÀÎµùÀ» ¼öÇàÇÕ´Ï´Ù.");
+		out.print("ë°”ì¸ë”©ì„ ìˆ˜í–‰í•©ë‹ˆë‹¤.");
 
 	}
 

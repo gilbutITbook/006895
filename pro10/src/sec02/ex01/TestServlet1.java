@@ -33,10 +33,10 @@ public class TestServlet1 extends HttpServlet {
 		out.println("<title>Test Servlet1</title>");
 		out.println("</head>");
 		out.println("<body bgcolor='green'>");
-		out.println("<b>TestServlet1ÀÔ´Ï´Ù.</b><br>");
-		out.println("<b>ÄÁÅØ½ºÆ®¸í : "+ context + "</b><br>");
-		out.println("<b>ÀüÃ¼°æ·Î : "+ url +"<b><br>");
-		out.println("<b>¸ÅÇÎ¸í : "+mapping+"<b><br>");
+		out.println("<b>TestServlet1ì…ë‹ˆë‹¤.</b><br>");
+		out.println("<b>ì»¨í…ìŠ¤íŠ¸ëª… : "+ context + "</b><br>");
+		out.println("<b>ì „ì²´ê²½ë¡œ : "+ url +"<b><br>");
+		out.println("<b>ë§¤í•‘ëª… : "+mapping+"<b><br>");
 		out.println("<b>URI : " + uri + "<b>");	
 		out.println("</body>");
 		out.println("</html>");

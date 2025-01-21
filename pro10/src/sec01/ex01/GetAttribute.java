@@ -33,9 +33,9 @@ public class GetAttribute extends HttpServlet {
 		String sesMesg = (String) sess.getAttribute("session");
 		String reqMesg = (String) request.getAttribute("request");
 
-		out.print("context°ª : " + ctxMesg + "<br>");
-		out.print("session°ª : " + sesMesg + "<br>");
-		out.print("request°ª : " + reqMesg + "<br>");
+		out.print("contextê°’ : " + ctxMesg + "<br>");
+		out.print("sessionê°’ : " + sesMesg + "<br>");
+		out.print("requestê°’ : " + reqMesg + "<br>");
 
 	}
 

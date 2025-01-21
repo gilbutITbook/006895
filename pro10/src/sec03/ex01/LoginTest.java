@@ -29,8 +29,8 @@ public class LoginTest extends HttpServlet {
 		String user_name = request.getParameter("user_name");
 		String user_pw = request.getParameter("user_pw");
 		out.println("<html><body>");
-		out.println("ÀÌ¸§´Â " + user_name + "<br>");
-		out.println("ºñ¹Ğ¹øÈ£´Â " + user_pw + "<br>");
+		out.println("ì´ë¦„ëŠ” " + user_name + "<br>");
+		out.println("ë¹„ë°€ë²ˆí˜¸ëŠ” " + user_pw + "<br>");
 		out.println("</body></html>");
 
 	}

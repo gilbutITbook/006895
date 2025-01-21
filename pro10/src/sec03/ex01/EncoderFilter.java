@@ -20,7 +20,7 @@ public class EncoderFilter implements Filter {
 	ServletContext context;
 
 	public void init(FilterConfig fConfig) throws ServletException {
-		System.out.println("utf-8 ÀÎÄÚµù............");
+		System.out.println("utf-8 ì¸ì½”ë”©............");
 		context = fConfig.getServletContext();
 
 	}
@@ -30,18 +30,18 @@ public class EncoderFilter implements Filter {
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws ServletException, IOException {
-		System.out.println("doFilter È£Ãâ");
+		System.out.println("doFilter í˜¸ì¶œ");
 		request.setCharacterEncoding("utf-8");
 		String context = ((HttpServletRequest) request).getContextPath();
 		String pathinfo = ((HttpServletRequest) request).getRequestURI();
 		String realPath = request.getRealPath(pathinfo);
-		String mesg = " Context  Á¤º¸:" + context + "\n URI Á¤º¸ : " + pathinfo + "\n ¹°¸®Àû °æ·Î:  " + realPath;
+		String mesg = " Context  ì •ë³´:" + context + "\n URI ì •ë³´ : " + pathinfo + "\n ë¬¼ë¦¬ì  ê²½ë¡œ:  " + realPath;
 		System.out.println(mesg);
 
 		long begin = System.currentTimeMillis();
 		chain.doFilter(request, response);
 		long end = System.currentTimeMillis();
-		System.out.println("ÀÛ¾÷ ½Ã°£:" + (end - begin) + "ms");
+		System.out.println("ì‘ì—… ì‹œê°„:" + (end - begin) + "ms");
 
 	}
 
@@ -53,7 +53,7 @@ public class EncoderFilter implements Filter {
 	 * @see Filter#destroy()
 	 */
 	public void destroy() {
-		System.out.println("destroy È£Ãâ");
+		System.out.println("destroy í˜¸ì¶œ");
 	}
 
 }

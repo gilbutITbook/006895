@@ -41,8 +41,8 @@ public class LoginTest extends HttpServlet {
 		out.println("</script>");
 		out.println("</head>");
 		out.println("<html><body>");
-		out.println("¾ÆÀÌµğ´Â " + loginUser.user_id + "<br>");
-		out.println("ÃÑ Á¢¼ÓÀÚ¼ö´Â" + LoginImpl.total_user + "<br>");
+		out.println("ì•„ì´ë””ëŠ” " + loginUser.user_id + "<br>");
+		out.println("ì´ ì ‘ì†ììˆ˜ëŠ”" + LoginImpl.total_user + "<br>");
 		out.println("</body></html>");
 
 	}

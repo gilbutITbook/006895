@@ -42,14 +42,14 @@ public class LoginTest extends HttpServlet {
 		}
 
 		out.println("<html><body>");
-		out.println("¾ÆÀÌµğ´Â " + loginUser.user_id + "<br>");
-		out.println("ÃÑ Á¢¼ÓÀÚ¼ö´Â" + LoginImpl.total_user + "<br><br>");
-		out.println("Á¢¼Ó ¾ÆÀÌµğ:<br>");
+		out.println("ì•„ì´ë””ëŠ” " + loginUser.user_id + "<br>");
+		out.println("ì´ ì ‘ì†ììˆ˜ëŠ”" + LoginImpl.total_user + "<br><br>");
+		out.println("ì ‘ì† ì•„ì´ë””:<br>");
 		List list = (ArrayList) context.getAttribute("user_list");
 		for (int i = 0; i < list.size(); i++) {
 			out.println(list.get(i) + "<br>");
 		}
-		out.println("<a href='logout?user_id=" + user_id + "'>·Î±×¾Æ¿ô </a>");
+		out.println("<a href='logout?user_id=" + user_id + "'>ë¡œê·¸ì•„ì›ƒ </a>");
 		out.println("</body></html>");
 	}
 

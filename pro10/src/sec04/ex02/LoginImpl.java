@@ -24,13 +24,13 @@ public class LoginImpl implements HttpSessionListener {
 
 	@Override
 	public void sessionCreated(HttpSessionEvent arg0) {
-		System.out.println("技记 积己");
+		System.out.println("靹胳厴 靸濎劚");
 		++total_user;
 	}
 
 	@Override
 	public void sessionDestroyed(HttpSessionEvent arg0) {
-		System.out.println("技记 家戈");
+		System.out.println("靹胳厴 靻岆└");
 		--total_user;
 	}
 

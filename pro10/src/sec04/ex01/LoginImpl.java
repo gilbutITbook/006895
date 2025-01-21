@@ -18,13 +18,13 @@ public class LoginImpl implements HttpSessionBindingListener {
 
 	@Override
 	public void valueBound(HttpSessionBindingEvent arg0) {
-		System.out.println("»ç¿ëÀÚ Á¢¼Ó");
+		System.out.println("ì‚¬ìš©ì ì ‘ì†");
 		++total_user;
 	}
 
 	@Override
 	public void valueUnbound(HttpSessionBindingEvent arg0) {
-		System.out.println("»ç¿ëÀÚ Á¢¼Ó ÇØÁ¦");
+		System.out.println("ì‚¬ìš©ì ì ‘ì† í•´ì œ");
 		total_user--;
 	}
 }

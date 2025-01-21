@@ -38,11 +38,11 @@ public class LogoutTest extends HttpServlet {
 
 		session.invalidate();
 
-		List user_list = (ArrayList) context.getAttribute("user_list");
+		List<String> user_list = (ArrayList) context.getAttribute("user_list");
 		user_list.remove(user_id);
 		context.removeAttribute("user_list");
 		context.setAttribute("user_list", user_list);
-		out.println("<br>�α׾ƿ� �߽��ϴ�.");
+		out.println("<br>로그아웃 했습니다.");
 	}
 
 }
