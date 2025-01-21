@@ -24,11 +24,11 @@ public class SessionTest extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter pw = response.getWriter();
 		HttpSession session = request.getSession();
-		session.setAttribute("name", "ÀÌ¼ø½Å");
+		session.setAttribute("name", "ì´ìˆœì‹ ");
 		
 		pw.println("<html><body>");
-		pw.println("<h1>¼¼¼Ç¿¡ ÀÌ¸§À» ¹ÙÀÎµùÇÕ´Ï´Ù.</h1>");
-		pw.println("<a href='/pro12/test01/session1.jsp'>Ã¹¹øÂ° ÆäÀÌÁö·Î ÀÌµ¿ÇÏ±â </a>");
+		pw.println("<h1>ì„¸ì…˜ì— ì´ë¦„ì„ ë°”ì¸ë”©í•©ë‹ˆë‹¤.</h1>");
+		pw.println("<a href='/pro12/test01/session1.jsp'>ì²«ë²ˆì§¸ í˜ì´ì§€ë¡œ ì´ë™í•˜ê¸° </a>");
 		pw.println("</body></html>"); 
 		
 	}
