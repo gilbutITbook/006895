@@ -22,7 +22,7 @@ public class LoginServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	/**
@@ -39,17 +39,17 @@ public class LoginServlet extends HttpServlet {
 		String user_email = request.getParameter("user_email");
 		String user_hp = request.getParameter("user_hp");
 
-		String data = "¾È³çÇÏ¼¼¿ä!<br> ·Î±×ÀÎÇÏ¼Ì½À´Ï´Ù.<br><br>";
+		String data = "ì•ˆë…•í•˜ì„¸ìš”!<br> ë¡œê·¸ì¸í•˜ì…¨ìŠµë‹ˆë‹¤.<br><br>";
 		data += "<html><body>";
-		data += "¾ÆÀÌµğ : " + user_id;
+		data += "ì•„ì´ë”” : " + user_id;
 		data += "<br>";
-		data += "ºñ¹Ğ¹øÈ£ : " + user_pw;
+		data += "ë¹„ë°€ë²ˆí˜¸ : " + user_pw;
 		data += "<br>";
-		data += "ÁÖ¼Ò : " + user_address;
+		data += "ì£¼ì†Œ : " + user_address;
 		data += "<br>";
 		data += "email : " + user_email;
 		data += "<br>";
-		data += "ÈŞ´ë ÀüÈ­ : " + user_hp;
+		data += "íœ´ëŒ€ ì „í™” : " + user_hp;
 		data += "<br>";
 		out.print(data);
 
@@ -57,14 +57,14 @@ public class LoginServlet extends HttpServlet {
 		out.print("<a href='/pro09/second?user_id=" + user_id 
 				             + "&user_pw=" + user_pw 
 				             + "&user_address=" + user_address
-				             + "'>µÎ ¹øÂ° ¼­ºí¸´À¸·Î º¸³»±â</a>");
+				             + "'>ë‘ ë²ˆì§¸ ì„œë¸”ë¦¿ìœ¼ë¡œ ë³´ë‚´ê¸°</a>");
 		data = "</body></html>";
 		out.print(data);
 	}
 	
 	public void destroy(){
-	      System.out.println("destroy ¸Ş¼­µå È£Ãâ");
-	   }
+		 System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
+	}
 
 
 }

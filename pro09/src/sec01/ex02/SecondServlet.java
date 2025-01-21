@@ -22,7 +22,7 @@ public class SecondServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	/**
@@ -37,7 +37,7 @@ public class SecondServlet extends HttpServlet {
 	 *      response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+															throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
@@ -47,15 +47,15 @@ public class SecondServlet extends HttpServlet {
 
 		out.println("<html><body>");
 		if (user_id != null && user_id.length() != 0) {
-			out.println("ÀÌ¹Ì ·Î±×ÀÎ »óÅÂÀÔ´Ï´Ù!<br><br>");
-			out.println("Ã¹ ¹øÂ° ¼­ºí¸´¿¡¼­ ³Ñ°ÜÁØ ¾ÆÀÌµğ: " + user_id + "<br>");
-			out.println("Ã¹ ¹øÂ° ¼­ºí¸´¿¡¼­ ³Ñ°ÜÁØ ºñ¹Ğ¹øÈ£: " + user_pw + "<br>");
-			out.println("Ã¹ ¹øÂ° ¼­ºí¸´¿¡¼­ ³Ñ°ÜÁØ ÁÖ¼Ò: " + user_address + "<br>");
+			out.println("ì´ë¯¸ ë¡œê·¸ì¸ ìƒíƒœì…ë‹ˆë‹¤!<br><br>");
+			out.println("ì²« ë²ˆì§¸ ì„œë¸”ë¦¿ì—ì„œ ë„˜ê²¨ì¤€ ì•„ì´ë””: " + user_id + "<br>");
+			out.println("ì²« ë²ˆì§¸ ì„œë¸”ë¦¿ì—ì„œ ë„˜ê²¨ì¤€ ë¹„ë°€ë²ˆí˜¸: " + user_pw + "<br>");
+			out.println("ì²« ë²ˆì§¸ ì„œë¸”ë¦¿ì—ì„œ ë„˜ê²¨ì¤€ ì£¼ì†Œ: " + user_address + "<br>");
 			out.println("</body></html>");
 		} else {
-			out.println("·Î±×ÀÎ ÇÏÁö ¾Ê¾Ò½À´Ï´Ù.<br><br>");
-			out.println("´Ù½Ã ·Î±×ÀÔÇÏ¼¼¿ä!!<br>");
-			out.println("<a href='/pro09/login.html'>·Î±×ÀÎÃ¢À¸·Î ÀÌµ¿ÇÏ±â </>");
+			out.println("ë¡œê·¸ì¸ í•˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤.<br><br>");
+			out.println("ë‹¤ì‹œ ë¡œê·¸ì…í•˜ì„¸ìš”!!<br>");
+			out.println("<a href='/pro09/login.html'>ë¡œê·¸ì¸ì°½ìœ¼ë¡œ ì´ë™í•˜ê¸° </>");
 		}
 	}
 

@@ -25,7 +25,7 @@ public class GetCookieValue extends HttpServlet {
 	      Cookie[] allValues=request.getCookies();
 	      for(int i=0; i<allValues.length;i++){
 	         if(allValues[i].getName().equals("cookieTest")){
-		      out.println("<h2>Cookie °ª °¡Á®¿À±â : "+URLDecoder.decode(allValues[i].getValue(),"utf-8"));
+	        	 out.println("<h2>Cookie ê°’ ê°€ì ¸ì˜¤ê¸° : "+URLDecoder.decode(allValues[i].getValue(),"utf-8"));
 		  }
 	      }
 

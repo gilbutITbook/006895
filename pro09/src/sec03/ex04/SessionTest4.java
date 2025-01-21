@@ -35,17 +35,17 @@ public class SessionTest4 extends HttpServlet {
 		if (session.isNew()){
 			if(user_id != null){
 				session.setAttribute("user_id", user_id);
-				out.println("<a href='login'>·Î±×ÀÎ »óÅÂ È®ÀÎ</a>");
+				out.println("<a href='login'>ë¡œê·¸ì¸ ìƒíƒœ í™•ì¸</a>");
 			}else {
-				out.print("<a href='login2.html'>´Ù½Ã ·Î±×ÀÎ ÇÏ¼¼¿ä!!</a>");
+				out.print("<a href='login2.html'>ë‹¤ì‹œ ë¡œê·¸ì¸ í•˜ì„¸ìš”!!</a>");
 				session.invalidate();
 			}
 		}else{
 			user_id = (String) session.getAttribute("user_id");
 			if (user_id != null && user_id.length() != 0) {
-				out.print("¾È³çÇÏ¼¼¿ä " + user_id + "´Ô!!!");
+				out.print("ì•ˆë…•í•˜ì„¸ìš” " + user_id + "ë‹˜!!!");
 			} else {
-				out.print("<a href='login2.html'>´Ù½Ã ·Î±×ÀÎ ÇÏ¼¼¿ä!!</a>");
+				out.print("<a href='login2.html'>ë‹¤ì‹œ ë¡œê·¸ì¸ í•˜ì„¸ìš”!!</a>");
 				session.invalidate();
 			}
 		}

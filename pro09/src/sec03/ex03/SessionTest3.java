@@ -27,12 +27,12 @@ public class SessionTest3 extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
-		out.println("¼¼¼Ç ¾ÆÀÌµğ: " + session.getId() + "<br>");
-		out.println("ÃÖÃÊ ¼¼¼Ç »ı¼º ½Ã°¢: " + new Date(session.getCreationTime()) + "<br>");
-		out.println("ÃÖ±Ù ¼¼¼Ç Á¢±Ù ½Ã°¢ : " + new Date(session.getLastAccessedTime()) + "<br>");
-		out.println("¼¼¼Ç À¯È¿ ½Ã°£ : " + session.getMaxInactiveInterval() + "<br>");
+		out.println("ì„¸ì…˜ ì•„ì´ë””: " + session.getId() + "<br>");
+		out.println("ìµœì´ˆ ì„¸ì…˜ ìƒì„± ì‹œê°: " + new Date(session.getCreationTime()) + "<br>");
+		out.println("ìµœê·¼ ì„¸ì…˜ ì ‘ê·¼ ì‹œê° : " + new Date(session.getLastAccessedTime()) + "<br>");
+		out.println("ì„¸ì…˜ ìœ íš¨ ì‹œê°„ : " + session.getMaxInactiveInterval() + "<br>");
 		if (session.isNew()) {
-			out.print("»õ ¼¼¼ÇÀÌ ¸¸µé¾îÁ³½À´Ï´Ù.");
+			out.print("ìƒˆ ì„¸ì…˜ì´ ë§Œë“¤ì–´ì¡ŒìŠµë‹ˆë‹¤.");
 		}
 		session.invalidate();
 

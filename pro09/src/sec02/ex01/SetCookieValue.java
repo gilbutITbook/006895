@@ -27,12 +27,12 @@ public class SetCookieValue extends HttpServlet {
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
 		Date d = new Date();
-		Cookie c = new Cookie("cookieTest", URLEncoder.encode("JSPÇÁ·Î±×·¡¹ÖÀÔ´Ï´Ù.", "utf-8"));
+		Cookie c = new Cookie("cookieTest", URLEncoder.encode("JSPí”„ë¡œê·¸ë˜ë°ì…ë‹ˆë‹¤.", "utf-8"));
 		c.setMaxAge(24 * 60 * 60);
-		//c.setMaxAge(-1);  //¼¼¼Ç ÄíÅ°¸¦ »ı¼ºÇÕ´Ï´Ù.
+		//c.setMaxAge(-1);  //ì„¸ì…˜ ì¿ í‚¤ë¥¼ ìƒì„±í•©ë‹ˆë‹¤.
 		response.addCookie(c);
-		out.println("ÇöÀç½Ã°£ : " + d);
-		out.println("<br> ¹®ÀÚ¿­À» Cookie¿¡ ÀúÀåÇÕ´Ï´Ù.");
+		out.println("í˜„ì¬ì‹œê°„ : " + d);
+		out.println("<br> ë¬¸ìì—´ì„ Cookieì— ì €ì¥í•©ë‹ˆë‹¤.");
 
 	}
 

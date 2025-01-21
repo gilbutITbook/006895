@@ -110,7 +110,7 @@ public class MemberDAO {
 			pstmt.setString(1, id);
 			pstmt.setString(2, pwd);
 			ResultSet rs = pstmt.executeQuery();
-			rs.next(); //Ä¿¼­¸¦ Ã¹¹øÂ° ·¹ÄÚµå·Î À§Ä¡½ÃÅµ´Ï´Ù.
+			rs.next();  //ì»¤ì„œë¥¼ ì²«ë²ˆì§¸ ë ˆì½”ë“œë¡œ ìœ„ì¹˜ì‹œí‚µë‹ˆë‹¤.
 			result = Boolean.parseBoolean(rs.getString("result"));
 			System.out.println("result=" + result);
 		} catch (Exception e) {

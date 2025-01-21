@@ -32,9 +32,9 @@ public class ShowMember extends HttpServlet {
            if(isLogon==true){ 
 	        id = (String)session.getAttribute("login.id");
 	        pwd = (String)session.getAttribute("login.pwd");
-   	        out.print("<html><body>");
-	        out.print("¾ÆÀÌµğ: " + id+"<br>");
-	        out.print("ºñ¹Ğ¹øÈ£: " + pwd+"<br>");
+	        out.print("<html><body>");
+	        out.print("ì•„ì´ë””: " + id+"<br>");
+	        out.print("ë¹„ë°€ë²ˆí˜¸: " + pwd+"<br>");
 	        out.print("</body></html>");
 	    }else{
 	       response.sendRedirect("login3.html");
