@@ -17,7 +17,7 @@ public class LoginServlet2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public void init() throws ServletException {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -30,16 +30,16 @@ public class LoginServlet2 extends HttpServlet {
 
 		String data = "<html>";
 		data += "<body>";
-		data += "¾ÆÀÌµğ : " + id;
+		data += "ì•„ì´ë””: " + id;
 		data += "<br>";
-		data += "ºñ¹Ğ¹øÈ£ : " + pw;
+		data += "ë¹„ë°€ë²ˆí˜¸: " + pw;
 		data += "</html>";
 		data += "</body>";
 		out.print(data);
 	}
 
 	public void destroy() {
-		System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+		System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 }

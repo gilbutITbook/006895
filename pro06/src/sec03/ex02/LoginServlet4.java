@@ -14,29 +14,29 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login4")
 public class LoginServlet4 extends HttpServlet {
 	public void init() throws ServletException {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doGet ¸Ş¼­µå È£Ãâ");
+		System.out.println("doGet ë©”ì„œë“œ í˜¸ì¶œ");
 		doHandle(request, response);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("doPost ¸Ş¼­µå È£Ãâ");
+		System.out.println("doPost ë©”ì„œë“œ í˜¸ì¶œ");
 		doHandle(request, response);
 	}
 
 	private void doHandle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		System.out.println("doHandle ¸Ş¼­µå È£Ãâ");
+		System.out.println("doHandle ë©”ì„œë“œ í˜¸ì¶œ");
 		String user_id = request.getParameter("user_id");
 		String user_pw = request.getParameter("user_pw");
-		System.out.println("¾ÆÀÌµğ:" + user_id);
-		System.out.println("ºñ¹Ğ¹øÈ£:" + user_pw);
+		System.out.println("ì•„ì´ë””:" + user_id);
+		System.out.println("ë¹„ë°€ë²ˆí˜¸:" + user_pw);
 	}
 
 	public void destroy() {
-		System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+		System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 }

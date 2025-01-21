@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/loginTest2")
 public class LoginTest2 extends HttpServlet{  
    public void init(){	
-      System.out.println("init ¸Ş¼­µå È£Ãâ");
+      System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
    }
 
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
@@ -22,38 +22,38 @@ public class LoginTest2 extends HttpServlet{
       String id = request.getParameter("user_id");  
       String pw = request.getParameter("user_pw");  
 		
-      System.out.println("¾ÆÀÌµğ   : "+ id);  // ÄÜ¼Ö¿¡ Ãâ·ÂÇÑ´Ù.
-      System.out.println("ÆĞ½º¿öµå : "+ pw);
+      System.out.println("ì•„ì´ë””: "+ id);  // ì½˜ì†”ì— ì¶œë ¥í•œë‹¤.
+      System.out.println("íŒ¨ìŠ¤ì›Œë“œ: "+ pw);
 
       if(id!= null &&(id.length()!=0)){
 		 if(id.equals("admin")){
 		   out.print("<html>");
 		   out.print("<body>");
-	 	   out.print( "<font size='12'>°ü¸®ÀÚ·Î ·Î±×ÀÎ ÇÏ¼Ì½À´Ï´Ù!! </font>" );
+	 	   out.print( "<font size='12'>ê´€ë¦¬ìë¡œ ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤!!</font>" );
 		   out.print("<br>");
-		   out.print("<input type=button value='È¸¿øÁ¤º¸ ¼öÁ¤ÇÏ±â'  />");
-		   out.print("<input type=button value='È¸¿øÁ¤º¸ »èÁ¦ÇÏ±â'  />");
+		   out.print("<input type=button value='íšŒì›ì •ë³´ ìˆ˜ì •í•˜ê¸°'  />");
+		   out.print("<input type=button value='íšŒì›ì •ë³´ ì‚­ì œí•˜ê¸°'  />");
 		   out.print("</html>");
 		   out.print("</body>");
 		 }else{
 		   out.print("<html>");
 		   out.print("<body>");
-		   out.print( id +" ´Ô!! ·Î±×ÀÎ ÇÏ¼Ì½À´Ï´Ù." );
+		   out.print( id +"ë‹˜!! ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤." );
 		   out.print("</html>");
 		   out.print("</body>");
 		 }     
       }else{
 		out.print("<html>");  
 		out.print("<body>");
-		out.print("ID¿Í ºñ¹Ğ¹øÈ£¸¦ ÀÔ·ÂÇÏ¼¼¿ä!!!" ) ;
+		out.print("ì•„ì´ë””ì™€ ë¹„ë°€ë²ˆí˜¸ë¥¼ ì…ë ¥í•˜ì„¸ìš”!!!" ) ;
 		out.print("<br>");
-		out.print("<a href='http://localhost:8090/pro06/test01/login.html'> ·Î±×ÀÎÃ¢À¸·Î ÀÌµ¿  </a>");
+		out.print("<a href='http://localhost:8090/pro06/test01/login.html'> ë¡œê·¸ì¸ì°½ìœ¼ë¡œ ì´ë™  </a>");
 		out.print("</html>");
 		out.print("</body>");
       }
    }
    public void destroy(){
-      System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+      System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
    }
 }
 

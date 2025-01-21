@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login") 
 public class LoginServlet  extends HttpServlet{
    public void init() throws ServletException {
-      System.out.println("init ¸Ş¼­µå È£Ãâ");
+      System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
    }
 
    protected void doGet(HttpServletRequest request , HttpServletResponse response) 
@@ -18,11 +18,11 @@ public class LoginServlet  extends HttpServlet{
       request.setCharacterEncoding("utf-8"); 	
       String user_id=request.getParameter("user_id");
       String user_pw=request.getParameter("user_pw"); 
-      System.out.println("¾ÆÀÌµğ:"+user_id);
-      System.out.println("ºñ¹Ğ¹øÈ£:"+user_pw);
+      System.out.println("ì•„ì´ë””:"+user_id);
+      System.out.println("ë¹„ë°€ë²ˆí˜¸:"+user_pw);
    }
 
    public void destroy() {
-      System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+      System.out.println("destroy ë©”ì„œë“œ í˜¸");
    }
 }

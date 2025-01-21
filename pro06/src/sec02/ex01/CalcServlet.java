@@ -28,25 +28,25 @@ public class CalcServlet extends HttpServlet {
 
 		if (command != null && command.equals("calculate")) {
 			String result = calculate(Float.parseFloat(won), operator);
-			pw.print("<html><font size=10>º¯È¯°á°ú</font><br>");
+			pw.print("<html><font size=10>ë³€í™˜ê²°ê³¼</font><br>");
 			pw.print("<html><font size=10>" + result + "</font><br>");
-			pw.print("<a href='/pro06/calc'>È¯À² °è»ê±â </a>");
+			pw.print("<a href='/pro06/calc'>í™˜ìœ¨ ê³„ì‚°ê¸°</a>");
 			return;
 		}
 
-		pw.print("<html><title>È¯À²°è»ê±â</title>");
-		pw.print("<font size=5>È¯À² °è»ê±â</font><br>");
+		pw.print("<html><title>í™˜ìœ¨ ê³„ì‚°ê¸°</title>");
+		pw.print("<font size=5>í™˜ìœ¨ ê³„ì‚°ê¸°</font><br>");
 		pw.print("<form  name='frmCalc' method='get'  action='/pro06/calc'  />  ");
-		pw.print("¿øÈ­: <input type='text' name='won' size=10  />  ");
+		pw.print("ì›í™”: <input type='text' name='won' size=10  />  ");
 		pw.print("<select name='operator' >");
-		pw.print("<option value='dollar'>´Ş·¯</option>");
-		pw.print("<option value='en'>¿£È­</option>");
-		pw.print("<option value='wian'>À§¾È</option>");
-		pw.print("<option value='pound'>ÆÄ¿îµå</option>");
-		pw.print("<option value='euro'>À¯·Î</option>");
+		pw.print("<option value='dollar'>ë‹¬ëŸ¬</option>");
+		pw.print("<option value='en'>ì—”í™”</option>");
+		pw.print("<option value='wian'>ìœ„ì•ˆ</option>");
+		pw.print("<option value='pound'>íŒŒìš´ë“œ</option>");
+		pw.print("<option value='euro'>ìœ ë¡œ</option>");
 		pw.print("</select>");
 		pw.print("<input type='hidden' name='command' value='calculate'  />  ");
-		pw.println("<input type='submit' value='º¯È¯'  />");
+		pw.println("<input type='submit' value='ë³€í™˜'  />");
 		pw.println("</form>");
 		pw.print("</html>");
 		pw.close();

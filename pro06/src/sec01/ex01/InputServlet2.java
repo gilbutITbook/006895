@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/input2")	
 public class InputServlet2 extends HttpServlet{
    public void init() throws ServletException {
-      System.out.println("init ¸Þ¼­µå È£Ãâ");
+      System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
    }
 
    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
@@ -28,6 +28,6 @@ public class InputServlet2 extends HttpServlet{
       }
    }
    public void destroy() {
-      System.out.println("destroy ¸Þ¼­µå È£Ãâ");
+      System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
    }
 }

@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/guguTest3")
 public class GuguTest3 extends HttpServlet {
 	public void init() {
-		System.out.println("init ¸Þ¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -23,7 +23,7 @@ public class GuguTest3 extends HttpServlet {
 
 		out.print(" <table border=1 width=1200  align=center>");
 		out.print("<tr align=center bgcolor='#FFFF66'>");
-		out.print("<td colspan=4>" + dan + " ´Ü Ãâ·Â  </td>");
+		out.print("<td colspan=4>" + dan + "ë‹¨ ì¶œë ¥  </td>");
 		out.print("</tr>");
 
 		for (int i = 1; i < 10; i++) {
@@ -51,6 +51,6 @@ public class GuguTest3 extends HttpServlet {
 	}
 
 	public void destroy() {
-		System.out.println("destroy ¸Þ¼­µå È£Ãâ");
+		System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 }

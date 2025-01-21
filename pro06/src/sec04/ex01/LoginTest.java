@@ -12,38 +12,38 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/loginTest")
 public class LoginTest extends HttpServlet{  
    public void init(){	
-      System.out.println("init ¸Ş¼­µå È£Ãâ");
+      System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
    }
 
    protected void doPost(HttpServletRequest request, HttpServletResponse response) 
-                                                  throws IOException, ServletException{
+		   														throws IOException, ServletException{
       request.setCharacterEncoding("utf-8");   
       response.setContentType("text/html;charset=utf-8");  
       PrintWriter out = response.getWriter();				
       String id = request.getParameter("user_id");  
       String pw = request.getParameter("user_pw");  
 		
-      System.out.println("¾ÆÀÌµğ   : "+ id);  
-      System.out.println("ÆĞ½º¿öµå : "+ pw);
+      System.out.println("ì•„ì´ë””: "+ id);  
+      System.out.println("íŒ¨ìŠ¤ì›Œë“œ: "+ pw);
 	
      if(id!= null &&(id.length()!=0)){
 		out.print("<html>");  
 		out.print("<body>");
-		out.print( id +" ´Ô!! ·Î±×ÀÎ ÇÏ¼Ì½À´Ï´Ù." );
+		out.print( id +"ë‹˜!! ë¡œê·¸ì¸ í•˜ì…¨ìŠµë‹ˆë‹¤.." );
 		out.print("</html>");
 		out.print("</body>");
       }else{
 		out.print("<html>");  
 		out.print("<body>");
-		out.print("¾ÆÀÌµğ¸¦ ÀÔ·ÂÇÏ¼¼¿ä!!!" ) ;
+		out.print("ì•„ì´ë””ë¥¼ ì…ë ¥í•˜ì„¸ìš”!!!" ) ;
 		out.print("<br>");
-		out.print("<a href='http://localhost:8090/pro06/test01/login.html'>·Î±×ÀÎÃ¢À¸·Î ÀÌµ¿  </a>");
+		out.print("<a href='http://localhost:8090/pro06/test01/login.html'>>ë¡œê·¸ì¸ì°½ìœ¼ë¡œ ì´ë™  </a>");
 		out.print("</html>");
 		out.print("</body>");
       }
    }
 
    public void destroy(){
-      System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+      System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
    }
 }

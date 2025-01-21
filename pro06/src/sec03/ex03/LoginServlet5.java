@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/login5")
 public class LoginServlet5 extends HttpServlet {
 	public void init() {
-		System.out.println("init ¸Ş¼­µå È£Ãâ");
+		System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,22 +22,22 @@ public class LoginServlet5 extends HttpServlet {
 		String id = request.getParameter("user_id");
 		String pw = request.getParameter("user_pw");
 		String address = request.getParameter("user_address");
-		System.out.println("¾ÆÀÌµğ   : " + id);
-		System.out.println("ºñ¹Ğ¹øÈ£ : " + pw);
+		System.out.println("ì•„ì´ë””: " + id);
+		System.out.println("ë¹„ë°€ë²ˆí˜¸: " + pw);
 
 		String data = "<html>";
 		data += "<body>";
-		data += "¾ÆÀÌµğ : " + id;
+		data += "ì•„ì´ë””: " + id;
 		data += "<br>";
-		data += "ºñ¹Ğ¹øÈ£ : " + pw;
+		data += "ë¹„ë°€ë²ˆí˜¸: " + pw;
 		data += "<br>";
-		data += "ÁÖ¼Ò : " + address;
+		data += "ì£¼ì†Œ: " + address;
 		data += "</html>";
 		data += "</body>";
 		out.print(data);
 	}
 
 	public void destroy() {
-		System.out.println("destroy ¸Ş¼­µå È£Ãâ");
+		System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
 	}
 }
