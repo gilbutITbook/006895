@@ -95,7 +95,7 @@ public class BoardController extends HttpServlet {
 				}
 				PrintWriter pw = response.getWriter();
 				pw.print("<script>" 
-				         +"  alert('»õ±ÛÀ» Ãß°¡Çß½À´Ï´Ù.');" 
+				         +"  alert('ìƒˆê¸€ì„ ì¶”ê°€í–ˆìŠµë‹ˆë‹¤.');" 
 						 +" location.href='"+request.getContextPath()+"/board/listArticles.do';"
 				         +"</script>");
 
@@ -127,9 +127,9 @@ public class BoardController extends HttpServlet {
 					System.out.println(fileItem.getFieldName() + "=" + fileItem.getString(encoding));
 					articleMap.put(fileItem.getFieldName(), fileItem.getString(encoding));
 				} else {
-					System.out.println("ÆÄ¶ó¹ÌÅÍ¸í:" + fileItem.getFieldName());
-					//System.out.println("ÆÄÀÏ¸í:" + fileItem.getName());
-					System.out.println("ÆÄÀÏÅ©±â:" + fileItem.getSize() + "bytes");
+					System.out.println("íŒŒë¼ë¯¸í„°ëª…:" + fileItem.getFieldName());
+					//System.out.println("íŒŒì¼ëª…:" + fileItem.getName());
+					System.out.println("íŒŒì¼í¬ê¸°:" + fileItem.getSize() + "bytes");
 					//articleMap.put(fileItem.getFieldName(), fileItem.getName());
 					if (fileItem.getSize() > 0) {
 						int idx = fileItem.getName().lastIndexOf("\\");
@@ -138,8 +138,8 @@ public class BoardController extends HttpServlet {
 						}
 
 						String fileName = fileItem.getName().substring(idx + 1);
-						System.out.println("ÆÄÀÏ¸í:" + fileName);
-						articleMap.put(fileItem.getFieldName(), fileName);  //ÀÍ½ºÇÃ·Î·¯¿¡¼­ ¾÷·Îµå ÆÄÀÏÀÇ °æ·Î Á¦°Å ÈÄ map¿¡ ÆÄÀÏ¸í ÀúÀå
+						System.out.println("íŒŒì¼ëª…:" + fileName);
+						articleMap.put(fileItem.getFieldName(), fileName);  //ìµìŠ¤í”Œë¡œëŸ¬ì—ì„œ ì—…ë¡œë“œ íŒŒì¼ì˜ ê²½ë¡œ ì œê±° í›„ mapì— íŒŒì¼ëª… ì €ì¥
 						File uploadFile = new File(currentDirPath + "\\temp\\" + fileName);
 						fileItem.write(uploadFile);
 
