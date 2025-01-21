@@ -57,9 +57,9 @@ public class FileUpload extends HttpServlet {
 					if (fileItem.isFormField()) {
 						System.out.println(fileItem.getFieldName() + "=" + fileItem.getString(encoding));
 					} else {
-						System.out.println("ÆÄ¶ó¹ÌÅÍ¸í:" + fileItem.getFieldName());
-						System.out.println("ÆÄÀÏ¸í:" + fileItem.getName());
-						System.out.println("ÆÄÀÏÅ©±â:" + fileItem.getSize() + "bytes");
+						System.out.println("íŒŒë¼ë¯¸í„°ëª…:" + fileItem.getFieldName());
+						System.out.println("íŒŒì¼ëª…:" + fileItem.getName());
+						System.out.println("íŒŒì¼í¬ê¸°:" + fileItem.getSize() + "bytes");
 	
 						if (fileItem.getSize() > 0) {
 							int idx = fileItem.getName().lastIndexOf("\\");
