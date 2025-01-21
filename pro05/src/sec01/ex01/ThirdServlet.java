@@ -19,7 +19,7 @@ public class ThirdServlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("ThirdServlet init �޼ҵ� ȣ��");
+		System.out.println("ThirdServlet init 메서드 호출");
 	}
 
 	/**
@@ -27,14 +27,14 @@ public class ThirdServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		System.out.println("ThirdServlet  doGet �޼ҵ� ȣ��");
+		System.out.println("ThirdServlet  doGet 메서드 호출");
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("ThirdServlet destroy �޼ҵ� ȣ��");
+		System.out.println("ThirdServlet destroy 메서드 호출");
 	}
 
 }

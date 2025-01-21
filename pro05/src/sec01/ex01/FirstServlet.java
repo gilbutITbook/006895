@@ -9,14 +9,14 @@ import javax.servlet.http.HttpServletResponse;
 
 public class FirstServlet  extends HttpServlet{ 
    public void init() throws ServletException {
-      System.out.println("init ¸Þ¼­µå È£Ãâ");
+      System.out.println("init ë©”ì„œë“œ í˜¸ì¶œ");
    }
 
    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws  ServletException, IOException {
-      System.out.println("doGet ¸Þ¼­µå È£Ãâ");
+      System.out.println("doGet ë©”ì„œë“œ í˜¸ì¶œ");
    } 
 
    public void destroy() {
-      System.out.println("destroy ¸Þ¼­µå È£Ãâ");
+      System.out.println("destroy ë©”ì„œë“œ í˜¸ì¶œ");
    }
 }
