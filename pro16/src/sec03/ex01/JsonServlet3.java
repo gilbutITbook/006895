@@ -43,32 +43,32 @@ public class JsonServlet3 extends HttpServlet {
 		JSONObject totaObject = new JSONObject();
 		JSONArray membersArray = new JSONArray();
 		JSONObject memberInfo = new JSONObject();
-		memberInfo.put("name", "¹ÚÁö¼º");
+		memberInfo.put("name", "ë°•ì§€ì„±");
 		memberInfo.put("age", "25");
-		memberInfo.put("gender", "³²ÀÚ");
-		memberInfo.put("nickname", "³¯¼¾µ¹ÀÌ");
+		memberInfo.put("gender", "ë‚¨ì");
+		memberInfo.put("nickname", "ë‚ ì„¼ëŒì´");
 		membersArray.add(memberInfo);
 
 		memberInfo = new JSONObject();
-		memberInfo.put("name", "±è¿¬¾Æ");
+		memberInfo.put("name", "ê¹€ì—°ì•„");
 		memberInfo.put("age", "21");
-		memberInfo.put("gender", "¿©ÀÚ");
-		memberInfo.put("nickname", "Ä®Ä¡");
+		memberInfo.put("gender", "ì—¬ì");
+		memberInfo.put("nickname", "ì¹¼ì¹˜");
 		membersArray.add(memberInfo);
 		totaObject.put("members", membersArray);
 
 		JSONArray bookArray = new JSONArray();
 		JSONObject bookInfo = new JSONObject();
-		bookInfo.put("title", "ÃÊº¸ÀÚ¸¦ À§ÇÑ ÀÚ¹Ù ÇÁ·Î±×·¡¹Ö");
-		bookInfo.put("writer", "ÀÌº´½Â");
+		bookInfo.put("title", "ì´ˆë³´ìë¥¼ ìœ„í•œ ìë°” í”„ë¡œê·¸ë˜ë°");
+		bookInfo.put("writer", "ì´ë³‘ìŠ¹");
 		bookInfo.put("price", "30000");
 		bookInfo.put("genre", "IT");
 		bookInfo.put("image", "http://localhost:8090/pro16/image/image1.jpg");
 		bookArray.add(bookInfo);
 
 		bookInfo = new JSONObject();
-		bookInfo.put("title", "¸ğµÎÀÇ ÆÄÀÌ½ã");
-		bookInfo.put("writer", "ÀÌ½ÂÂù");
+		bookInfo.put("title", "ëª¨ë‘ì˜ íŒŒì´ì¬");
+		bookInfo.put("writer", "ì´ìŠ¹ì°¬");
 		bookInfo.put("price", "12000");
 		bookInfo.put("genre", "IT");
 		bookInfo.put("image", "http://localhost:8090/pro16/image/image2.jpg");

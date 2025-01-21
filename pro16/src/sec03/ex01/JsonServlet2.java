@@ -47,18 +47,18 @@ public class JsonServlet2 extends HttpServlet {
 		JSONArray membersArray = new JSONArray();
 		JSONObject memberInfo = new JSONObject();
 
-		memberInfo.put("name", "¹ÚÁö¼º");
+		memberInfo.put("name", "ë°•ì§€ì„±");
 		memberInfo.put("age", "25");
-		memberInfo.put("gender", "³²ÀÚ");
-		memberInfo.put("nickname", "³¯¼¾µ¹ÀÌ");
-        //  ¹è¿­¿¡ ÀÔ·Â
+		memberInfo.put("gender", "ë‚¨ì");
+		memberInfo.put("nickname", "ë‚ ì„¼ëŒì´");
+        //  ë°°ì—´ì— ì…ë ¥
 		membersArray.add(memberInfo);
 
 		memberInfo = new JSONObject();
-		memberInfo.put("name", "±è¿¬¾Æ");
+		memberInfo.put("name", "ê¹€ì—°ì•„");
 		memberInfo.put("age", "21");
-		memberInfo.put("gender", "¿©ÀÚ");
-		memberInfo.put("nickname", "Ä®Ä¡");
+		memberInfo.put("gender", "ì—¬ì");
+		memberInfo.put("nickname", "ì¹¼ì¹˜");
 		membersArray.add(memberInfo);
 
 		totalObject.put("members", membersArray);

@@ -41,7 +41,7 @@ public class JsonServlet1 extends HttpServlet {
 		try {
 			JSONParser jsonParser = new JSONParser();
 			JSONObject jsonObject = (JSONObject) jsonParser.parse(jsonInfo);
-			System.out.println("* È¸¿ø Á¤º¸*");
+			System.out.println("* íšŒì› ì •ë³´*");
 			System.out.println(jsonObject.get("name"));
 			System.out.println(jsonObject.get("age"));
 			System.out.println(jsonObject.get("gender"));

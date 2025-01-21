@@ -38,7 +38,7 @@ public class AjaxTest1 extends HttpServlet {
 		String param = (String) request.getParameter("param");
 		System.out.println("param = " + param);
 		PrintWriter writer = response.getWriter();
-		writer.print("¾È³çÇÏ¼¼¿ä.¼­¹öÀÔ´Ï´Ù.");
+		writer.print("ì•ˆë…•í•˜ì„¸ìš”.ì„œë²„ìž…ë‹ˆë‹¤.");
 	}
 
 }
