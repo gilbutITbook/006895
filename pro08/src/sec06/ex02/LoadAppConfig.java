@@ -23,7 +23,7 @@ public class LoadAppConfig extends HttpServlet {
 	 */
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		System.out.println("LoadAppConfigÀÇ init ¸Ş¼­µå È£Ãâ");
+		System.out.println("LoadAppConfigì˜ init ë©”ì„œë“œ í˜¸ì¶œ");
 		context = config.getServletContext();
 		String menu_member = context.getInitParameter("menu_member");
 		String menu_order = context.getInitParameter("menu_order");
@@ -48,7 +48,7 @@ public class LoadAppConfig extends HttpServlet {
 		String menu_goods = (String)context.getAttribute("menu_goods");
 
 		out.print("<html><body>");
-		out.print("<table border=1 cellspacing=0><tr>¸Ş´º ÀÌ¸§</tr>");
+		out.print("<table border=1 cellspacing=0><tr>ë©”ë‰´ ì´ë¦„</tr>");
 		out.print("<tr><td>" + menu_member + "</td></tr>");
 		out.print("<tr><td>" + menu_order + "</td></tr>");
 		out.print("<tr><td>" + menu_goods + "</td></tr>");

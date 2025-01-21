@@ -17,7 +17,7 @@ public class SecondServlet extends HttpServlet{
       out.println("<html><body>");
       String name=request.getParameter("name");
       out.println("</body></html>");
-      out.println("ÀÌ¸§:"+name);
+      out.println("ì´ë¦„:"+name);
       out.println("<br>");
       out.println("</body></html>");
 

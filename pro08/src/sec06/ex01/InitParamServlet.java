@@ -33,7 +33,7 @@ public class InitParamServlet extends HttpServlet {
 		out.print("<html><body>");
 		out.print("<table><tr>");
 		out.print("<td>email: </td><td>" + email + "</td></tr>");
-		out.print("<tr><td>ÈŞ´ëÀüÈ­: </td><td>" + tel + "</td>");
+		out.print("<tr><td>íœ´ëŒ€ì „í™”: </td><td>" + tel + "</td>");
 		out.print("</tr></table></body></html>");
 
 	}

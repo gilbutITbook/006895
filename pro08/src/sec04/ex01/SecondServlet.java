@@ -17,9 +17,9 @@ public class SecondServlet extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		String address = (String) request.getAttribute("address");
 		out.println("<html><body>");
-		out.println("ÁÖ¼Ò:" + address);
+		out.println("ì£¼ì†Œ:" + address);
 		out.println("<br>");
-		out.println("redirect¸¦ ÀÌ¿ëÇÑ ¹ÙÀÎµù ½Ç½ÀÀÔ´Ï´Ù.");
+		out.println("redirectë¥¼ ì´ìš©í•œ ë°”ì¸ë”© ì‹¤ìŠµì…ë‹ˆë‹¤.");
 		out.println("</body></html>");
 
 	}

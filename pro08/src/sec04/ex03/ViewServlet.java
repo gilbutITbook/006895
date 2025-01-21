@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 //@WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request,HttpServletResponse response)
-		                                            throws ServletException, IOException {
+		                                            				throws ServletException, IOException {
 	      request.setCharacterEncoding("utf-8");		
 	      response.setContentType("text/html;charset=utf-8");
 	      PrintWriter out=response.getWriter();
 		List membersList = (List) request.getAttribute("membersList");
 		out.print("<html><body>");
 		out.print("<table border=1><tr align='center' bgcolor='lightgreen'>");
-		out.print("<td>¾ÆÀÌµğ</td><td>ºñ¹Ğ¹øÈ£</td><td>ÀÌ¸§</td><td>ÀÌ¸ŞÀÏ</td><td>°¡ÀÔÀÏ</td><td >»èÁ¦</td></tr>");
+		out.print("<td>ì•„ì´ë””</td><td>ë¹„ë°€ë²ˆí˜¸</td><td>ì´ë¦„</td><td>ì´ë©”ì¼</td><td>ê°€ì…ì¼</td><td >ì‚­ì œ</td></tr>");
 		for (int i = 0; i < membersList.size(); i++) {
 			MemberVO memberVO = (MemberVO) membersList.get(i);
 			String id = memberVO.getId();
@@ -32,10 +32,10 @@ public class ViewServlet extends HttpServlet {
 			Date joinDate = memberVO.getJoinDate();
 			out.print("<tr><td>" + id + "</td><td>" + pwd + "</td><td>" + name + "</td><td>" + email + "</td><td>"
 					+ joinDate + "</td><td>" + "<a href='/pro08/member3?command=delMember&id=" + id
-					+ "'>»èÁ¦ </a></td></tr>");
+					+ "'>ì‚­ì œ </a></td></tr>");
 
 		}
 		out.print("</table></body></html>");
-		out.print("<a href='/pro08/memberForm.html'>»õ È¸¿ø µî·ÏÇÏ±â</a");
+		out.print("<a href='/pro08/memberForm.html'>ìƒˆ íšŒì› ë“±ë¡í•˜ê¸°</a");
 	}
 }

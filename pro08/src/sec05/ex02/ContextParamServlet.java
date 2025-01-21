@@ -23,7 +23,8 @@ public class ContextParamServlet extends HttpServlet {
       String menu_goods =context.getInitParameter("menu_goods");
 
       out.print("<html><body>");
-      out.print("<table border=1 cellspacing=0><tr>∏ﬁ¥∫ ¿Ã∏ß</tr>");
+      out.print("<table border=1 cellspacing=0><tr>Î©îÎâ¥ Ïù¥Î¶Ñ</tr>");
+      out.print("<tr><td>" + menu_member + "</td></tr>");
       out.print("<tr><td>" + menu_member + "</td></tr>");
       out.print("<tr><td>" + menu_order + "</td></tr>");
       out.print("<tr><td>" + menu_goods + "</td></tr>");

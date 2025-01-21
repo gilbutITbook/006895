@@ -15,16 +15,16 @@ public class SecondServlet extends HttpServlet{
       response.setContentType("text/html;charset=utf-8");
       PrintWriter out = response.getWriter();
 
-     /* out.println("<html><body>");
-      out.println("dispatch¸¦ ÀÌ¿ëÇÑ forward ½Ç½ÀÀÔ´Ï´Ù.");
+      /* out.println("<html><body>");
+      out.println("dispatchë¥¼ ì´ìš©í•œ forward ì‹¤ìŠµì…ë‹ˆë‹¤.");
       out.println("</body></html>");*/
       
       String name=request.getParameter("name");
       out.println("<html><body>");
-      out.println("ÀÌ¸§:"+name);
+      out.println("ì´ë¦„:"+name);
       out.println("<br>");
-      out.println("dispatch¸¦ ÀÌ¿ëÇÑ forward ½Ç½ÀÀÔ´Ï´Ù.");
-      out.println("</body></html>");   
+      out.println("dispatchë¥¼ ì´ìš©í•œ forward ì‹¤ìŠµì…ë‹ˆë‹¤.");
+      out.println("</body></html>");    
 
    }
 }

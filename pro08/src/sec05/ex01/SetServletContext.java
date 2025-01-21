@@ -20,12 +20,12 @@ public class SetServletContext extends HttpServlet {
 		ServletContext context = getServletContext();
 
 		List member = new ArrayList();
-		member.add("ÀÌ¼ø½Å");
+		member.add("ì´ìˆœì‹ ");
 		member.add(30);
 		context.setAttribute("member", member);
 
 		out.print("<html><body>");
-		out.print("ÀÌ¼ø½Å°ú 30 ¼³Á¤");
+		out.print("ì´ìˆœì‹ ê³¼ 30 ì„¤ì •");
 		out.print("</body></html>");
 	}
 }
